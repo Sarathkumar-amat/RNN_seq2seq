@@ -7,3 +7,4 @@ from Romanized text to Devanagari using the Dakshina dataset.
 - `data/` – dataset (not tracked in git)
 - `models/` – model checkpoints
 - `train.py` – training script
+sample update
