@@ -28,9 +28,7 @@ def build_char_vocab(texts):
     stoi = {ch: i for i, ch in enumerate(itos)}
     return stoi, itos
 
-df_train, df_dev = build_char_vocab()
-src_stoi, src_itos = build_char_vocab(df_train["roman"])
-tgt_stoi, tgt_itos = build_char_vocab(df_train["native"])
+
 
 # pad_idx = src_stoi[PAD]   # same index exists in both; we’ll also grab target pad below
 # tgt_pad_idx = tgt_stoi[PAD]
