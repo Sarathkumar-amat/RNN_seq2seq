@@ -23,7 +23,7 @@ criterion = nn.CrossEntropyLoss(ignore_index=tgt_pad_idx)
 optimizer = optim.Adam(model.parameters(), lr=3e-4)
 
 for epoch in range(1, EPOCHS+1):
-    train_loss = train_one_epoch(model, train_loader, clip=1.0, tfr=1.0)  # start with 1.0
+    train_loss = train_one_epoch(model, train_loader, device,optimizer,criterion,tgt_pad_idx,clip=1.0, tfr=1.0)  # start with 1.0
     val_loss   = evaluate(model, dev_loader,device,tgt_pad_idx=tgt_pad_idx)
     val_acc    = char_accuracy(model, dev_loader,device,tgt_pad_idx=tgt_pad_idx)
     print(f"Epoch {epoch:02d} | train {train_loss:.4f} | val {val_loss:.4f} | acc {val_acc:.3f}")
