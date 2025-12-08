@@ -1,4 +1,5 @@
-import torch.optim.optim
+import torch.optim as optim
+import torch
 
 # device=next(model.parameters()).device
 # optimizer = optim.Adam(model.parameters(),lr=3e-4)
@@ -13,6 +14,8 @@ def train_one_epoch(model,loader,device,optimizer,criterion,tgt_pad_idx,clip=1.0
         optimizer.zero_grad()
         logits=model(src,src_len,dec_in,teacher_forcing_ratio=tfr)
         B,T,V = logits.size()
+        print(B,T,V)
+        print(dec_out.shape)
         loss = criterion(logits.reshape(B*T,V),dec_out.reshape(B*T))
         loss.backward()
         torch.nn.utils.clip_grad_norm_(model.parameters(),clip)

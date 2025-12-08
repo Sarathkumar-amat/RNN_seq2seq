@@ -14,16 +14,17 @@ SRC_V, TGT_V = len(src_itos), len(tgt_itos)
 EMB, HID, LAYERS = 128, 256, 1
 CELL = "gru"  # try "lstm" later
 
-enc = Encoder(SRC_V, EMB, HID, num_layers=LAYERS, cell_type=CELL, pad_idx=src_stoi[PAD])
-dec = Decoder(TGT_V, EMB, HID, num_layers=LAYERS, cell_type=CELL, pad_idx=tgt_stoi[PAD])
+enc = Encoder(CELL,SRC_V, EMB, HID, num_layers=LAYERS, pad_idx=src_stoi[PAD])
+dec = Decoder(CELL,TGT_V, EMB, HID, num_layers=LAYERS, pad_idx=tgt_stoi[PAD])
 model = translit_Seq2Seq(enc, dec, cell_type=CELL).to("cuda" if torch.cuda.is_available() else "cpu")
 
 device = next(model.parameters()).device
 criterion = nn.CrossEntropyLoss(ignore_index=tgt_pad_idx)
 optimizer = optim.Adam(model.parameters(), lr=3e-4)
 
-for epoch in range(1, EPOCHS+1):
-    train_loss = train_one_epoch(model, train_loader, device,optimizer,criterion,tgt_pad_idx,clip=1.0, tfr=1.0)  # start with 1.0
-    val_loss   = evaluate(model, dev_loader,device,tgt_pad_idx=tgt_pad_idx)
-    val_acc    = char_accuracy(model, dev_loader,device,tgt_pad_idx=tgt_pad_idx)
-    print(f"Epoch {epoch:02d} | train {train_loss:.4f} | val {val_loss:.4f} | acc {val_acc:.3f}")
+train_one_epoch(model, train_loader, device,optimizer,criterion,tgt_pad_idx,clip=1.0, tfr=1.0)  # start with 1.0
+# for epoch in range(1, EPOCHS+1):
+#     train_loss = train_one_epoch(model, train_loader, device,optimizer,criterion,tgt_pad_idx,clip=1.0, tfr=1.0)  # start with 1.0
+#     val_loss   = evaluate(model, dev_loader,device,tgt_pad_idx=tgt_pad_idx)
+#     val_acc    = char_accuracy(model, dev_loader,device,tgt_pad_idx=tgt_pad_idx)
+#     print(f"Epoch {epoch:02d} | train {train_loss:.4f} | val {val_loss:.4f} | acc {val_acc:.3f}")

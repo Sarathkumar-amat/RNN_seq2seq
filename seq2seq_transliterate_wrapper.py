@@ -14,8 +14,8 @@ def make_rnn(cell_type,input_size,hidden_size,num_layers,batch_first=True):
 
 class Encoder(nn.Module):
     def __init__(self,cell_type,vocab_size, embed_dim,hidden_size,num_layers,pad_idx):
-        super.__init__()
-        self.embedding = nn.Embedding(vocab_size,embed_dim,padding_index=pad_idx)
+        super().__init__()
+        self.embedding = nn.Embedding(vocab_size,embed_dim,padding_idx=pad_idx)
         self.rnn = make_rnn(cell_type,embed_dim,hidden_size,num_layers,batch_first=True)
         self.cell_type = cell_type
     def forward(self,src,src_len=None):
@@ -25,20 +25,21 @@ class Encoder(nn.Module):
 
 class Decoder(nn.Module):
     def __init__(self,cell_type,vocab_size,embed_dim,hidden_size,num_layers,pad_idx):
-        super.__init()
-        self.embedding = nn.Embedding(vocab_size,embed_dim,padding_index=pad_idx)
+        super().__init__()
+        self.embedding = nn.Embedding(vocab_size,embed_dim,padding_idx=pad_idx)
         self.rnn = make_rnn(cell_type,embed_dim,hidden_size,num_layers,batch_first=True)
-        self.out = nn.linear(hidden_size,vocab_size)
+        self.out = nn.Linear(hidden_size,vocab_size)
         self.cell_type = cell_type
     
     def forward(self,y_in,hidden,tgt_len=None):
         x = self.embedding(y_in)
         outputs,hidden = self.rnn(x,hidden)
-        logits = self.out(hidden)
+        logits = self.out(outputs)
         return logits,hidden
 
 class translit_Seq2Seq(nn.Module):
     def __init__(self,encoder,decoder,cell_type):
+        super().__init__()
         self.encoder = encoder
         self.decoder = decoder
         self.cell_type = cell_type
@@ -66,5 +67,5 @@ class translit_Seq2Seq(nn.Module):
                 y_t=dec_in[:,t:t+1] 
             else:
                 y_t=logit_t.argmax(dim=-1) # (B,1)
-        return torch.cat(logits_all,dim=-1) # (B, T_dec, V)
+        return torch.cat(logits_all,dim=1) # (B, T_dec, V)
 
