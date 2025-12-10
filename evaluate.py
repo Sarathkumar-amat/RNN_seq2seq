@@ -9,7 +9,7 @@ def evaluate(model, loader,device,criterion,tgt_pad_idx):
         src, dec_in, dec_out = src.to(device), dec_in.to(device), dec_out.to(device)
         logits = model(src, src_len, dec_in, teacher_forcing_ratio=0.0)
         # print(logits)
-        # B, T, V = logits.size()
+        B, T, V = logits.size()
         # print(B,T,V)
         # print(dec_out.shape)
         loss = criterion(logits.reshape(B*T, V), dec_out.reshape(B*T))
