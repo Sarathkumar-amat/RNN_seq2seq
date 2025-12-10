@@ -23,4 +23,6 @@ def train_one_epoch(model,loader,device,optimizer,criterion,tgt_pad_idx,clip=1.0
         non_pad = (dec_out!=tgt_pad_idx).sum().item()
         total_loss+=loss.item()*non_pad
         total_tokens+=non_pad
+    model.eval()
+    
     return total_loss/max(1,total_tokens)
