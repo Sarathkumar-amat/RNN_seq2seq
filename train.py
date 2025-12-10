@@ -35,7 +35,7 @@ optimizer = optim.Adam(model.parameters(), lr=3e-4)
 train_one_epoch(model, train_loader, device,optimizer,criterion,tgt_pad_idx,clip=1.0, tfr=1.0)  # start with 1.0
 for epoch in range(1, EPOCHS+1):
     train_loss = train_one_epoch(model, train_loader, device,optimizer,criterion,tgt_pad_idx,clip=1.0, tfr=1.0)  # start with 1.0
-    val_loss   = evaluate(model, dev_loader,device,tgt_pad_idx=tgt_pad_idx)
+    val_loss   = evaluate(model, dev_loader,device,criterion,tgt_pad_idx=tgt_pad_idx)
     val_acc    = char_accuracy(model, dev_loader,device,tgt_pad_idx=tgt_pad_idx)
     train_losses.append(train_loss)
     val_losses.append(val_loss)
