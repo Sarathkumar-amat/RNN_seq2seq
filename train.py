@@ -2,6 +2,9 @@ from train_one_epoch import train_one_epoch
 from encode_collate import train_loader,dev_loader,src_itos,tgt_itos,src_stoi,tgt_stoi,PAD
 from seq2seq_transliterate_wrapper import Encoder,Decoder,translit_Seq2Seq
 from evaluate import evaluate,char_accuracy
+from torch.utils.tensorboard import SummaryWriter
+import wandb
+
 
 import torch.optim as optim
 import torch
@@ -32,11 +35,43 @@ device = next(model.parameters()).device
 criterion = nn.CrossEntropyLoss(ignore_index=tgt_pad_idx)
 optimizer = optim.Adam(model.parameters(), lr=3e-4)
 
-train_one_epoch(model, train_loader, device,optimizer,criterion,tgt_pad_idx,clip=1.0, tfr=1.0)  # start with 1.0
+# train_one_epoch(model, train_loader, device,optimizer,criterion,tgt_pad_idx,clip=1.0, tfr=1.0)  # start with 1.0
+
+log_dir = "runs/rnn_seq2seq"
+writer = SummaryWriter(log_dir)
+
+wandb.init(
+    project="rnn-seq2seq",
+    name="baseline-rnn",
+    config={
+        "epochs": EPOCHS,
+        "batch_size": train_loader.batch_size,
+        "learning_rate": optimizer.param_groups[0]["lr"],
+        "clip": 1.0,
+        "teacher_forcing": 1.0,
+        "model": "RNN-Seq2Seq"
+    }
+)
+
 for epoch in range(1, EPOCHS+1):
     train_loss = train_one_epoch(model, train_loader, device,optimizer,criterion,tgt_pad_idx,clip=1.0, tfr=1.0)  # start with 1.0
     val_loss   = evaluate(model, dev_loader,device,criterion,tgt_pad_idx=tgt_pad_idx)
     val_acc    = char_accuracy(model, dev_loader,device,criterion,tgt_pad_idx=tgt_pad_idx)
+
+
+     # -------- W&B logging --------
+    wandb.log({
+        "epoch": epoch,
+        "train_loss": train_loss,
+        "val_loss": val_loss,
+        "val_accuracy": val_acc,
+        "learning_rate": optimizer.param_groups[0]["lr"]
+    })
+    # -------- TensorBoard logging --------
+    writer.add_scalar("Loss/train", train_loss, epoch)
+    writer.add_scalar("Loss/val",   val_loss,   epoch)
+    writer.add_scalar("Accuracy/val", val_acc, epoch)
+
     train_losses.append(train_loss)
     val_losses.append(val_loss)
     val_accs.append(val_acc)
@@ -56,6 +91,9 @@ for epoch in range(1, EPOCHS+1):
             'val_loss': val_loss
         }, BEST_MODEL_PATH)
 
+        # upload checkpoint to W&B
+        wandb.save(BEST_MODEL_PATH)
+
     else:
         epochs_no_improve += 1
         print(f"➤ No improvement for {epochs_no_improve} epoch(s).")
@@ -63,4 +101,6 @@ for epoch in range(1, EPOCHS+1):
         if epochs_no_improve >= PATIENCE:
             print("\nEARLY STOPPING TRIGGERED!")
             break
+wandb.finish()
+writer.close()
 print(f"\nTraining complete. Best model saved to: {BEST_MODEL_PATH}")

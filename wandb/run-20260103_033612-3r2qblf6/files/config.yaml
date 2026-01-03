@@ -1,0 +1,103 @@
+_wandb:
+    value:
+        cli_version: 0.21.3
+        e:
+            ttd4x1nr63oz4je6oah1s1ups7viu8zv:
+                codePath: train.py
+                codePathLocal: train.py
+                cpu_count: 64
+                cpu_count_logical: 128
+                cudaVersion: "12.4"
+                disk:
+                    /:
+                        total: "200448528384"
+                        used: "99370336256"
+                email: ns24z276@smail.iitm.ac.in
+                executable: /speech/sarath/miniconda3/envs/tts_conda_env/bin/python3
+                git:
+                    commit: 83e0a90a5c9cbac77dcc83f03795d257ead2239f
+                    remote: https://github.com/Sarathkumar-amat/RNN_seq2seq.git
+                gpu: NVIDIA GeForce RTX 3090
+                gpu_count: 8
+                gpu_nvidia:
+                    - architecture: Ampere
+                      cudaCores: 10496
+                      memoryTotal: "25769803776"
+                      name: NVIDIA GeForce RTX 3090
+                      uuid: GPU-4ac3339a-4496-15a2-0053-5e9d1b3135ec
+                    - architecture: Ampere
+                      cudaCores: 10496
+                      memoryTotal: "25769803776"
+                      name: NVIDIA GeForce RTX 3090
+                      uuid: GPU-705f872d-13a3-a37c-3c82-0f053ac5d504
+                    - architecture: Ampere
+                      cudaCores: 10496
+                      memoryTotal: "25769803776"
+                      name: NVIDIA GeForce RTX 3090
+                      uuid: GPU-fefb312b-2414-6a1c-ae90-b8650b6b886d
+                    - architecture: Ampere
+                      cudaCores: 10496
+                      memoryTotal: "25769803776"
+                      name: NVIDIA GeForce RTX 3090
+                      uuid: GPU-61a83374-fc03-3df9-f8b8-c218a89233de
+                    - architecture: Ampere
+                      cudaCores: 10496
+                      memoryTotal: "25769803776"
+                      name: NVIDIA GeForce RTX 3090
+                      uuid: GPU-9690f277-b6de-f986-6164-d4fc6f940ff1
+                    - architecture: Ampere
+                      cudaCores: 10496
+                      memoryTotal: "25769803776"
+                      name: NVIDIA GeForce RTX 3090
+                      uuid: GPU-df8f9dd7-1dd9-6e1e-4a7d-5f0328f49185
+                    - architecture: Ampere
+                      cudaCores: 10496
+                      memoryTotal: "25769803776"
+                      name: NVIDIA GeForce RTX 3090
+                      uuid: GPU-5ab9f103-6748-adde-c312-b2babde9a5f7
+                    - architecture: Ampere
+                      cudaCores: 10496
+                      memoryTotal: "25769803776"
+                      name: NVIDIA GeForce RTX 3090
+                      uuid: GPU-739276aa-c106-43a9-22dc-a70684b224ab
+                host: gpu13
+                memory:
+                    total: "540832198656"
+                os: Linux-6.8.0-87-generic-x86_64-with-glibc2.35
+                program: /speech/sarath/RNN_seq2seq/train.py
+                python: CPython 3.10.18
+                root: /speech/sarath/RNN_seq2seq
+                startedAt: "2026-01-03T08:36:12.181679Z"
+                writerId: ttd4x1nr63oz4je6oah1s1ups7viu8zv
+        m: []
+        python_version: 3.10.18
+        t:
+            "1":
+                - 1
+                - 100
+                - 105
+            "2":
+                - 1
+                - 100
+                - 105
+            "3":
+                - 2
+                - 3
+                - 13
+                - 16
+            "4": 3.10.18
+            "5": 0.21.3
+            "12": 0.21.3
+            "13": linux-x86_64
+batch_size:
+    value: 64
+clip:
+    value: 1
+epochs:
+    value: 30
+learning_rate:
+    value: 0.0003
+model:
+    value: RNN-Seq2Seq
+teacher_forcing:
+    value: 1

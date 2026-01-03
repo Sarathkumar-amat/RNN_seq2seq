@@ -1,0 +1,26 @@
+2026-01-03 03:36:12,183 INFO    MainThread:217558 [wandb_setup.py:_flush():81] Current SDK version is 0.21.3
+2026-01-03 03:36:12,183 INFO    MainThread:217558 [wandb_setup.py:_flush():81] Configure stats pid to 217558
+2026-01-03 03:36:12,183 INFO    MainThread:217558 [wandb_setup.py:_flush():81] Loading settings from /speech/sarath/.config/wandb/settings
+2026-01-03 03:36:12,183 INFO    MainThread:217558 [wandb_setup.py:_flush():81] Loading settings from /speech/sarath/RNN_seq2seq/wandb/settings
+2026-01-03 03:36:12,183 INFO    MainThread:217558 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2026-01-03 03:36:12,183 INFO    MainThread:217558 [wandb_init.py:setup_run_log_directory():686] Logging user logs to /speech/sarath/RNN_seq2seq/wandb/run-20260103_033612-3r2qblf6/logs/debug.log
+2026-01-03 03:36:12,183 INFO    MainThread:217558 [wandb_init.py:setup_run_log_directory():687] Logging internal logs to /speech/sarath/RNN_seq2seq/wandb/run-20260103_033612-3r2qblf6/logs/debug-internal.log
+2026-01-03 03:36:12,183 INFO    MainThread:217558 [wandb_init.py:init():813] calling init triggers
+2026-01-03 03:36:12,183 INFO    MainThread:217558 [wandb_init.py:init():818] wandb.init called with sweep_config: {}
+config: {'epochs': 30, 'batch_size': 64, 'learning_rate': 0.0003, 'clip': 1.0, 'teacher_forcing': 1.0, 'model': 'RNN-Seq2Seq', '_wandb': {}}
+2026-01-03 03:36:12,183 INFO    MainThread:217558 [wandb_init.py:init():854] starting backend
+2026-01-03 03:36:12,393 INFO    MainThread:217558 [wandb_init.py:init():857] sending inform_init request
+2026-01-03 03:36:12,399 INFO    MainThread:217558 [wandb_init.py:init():865] backend started and connected
+2026-01-03 03:36:12,401 INFO    MainThread:217558 [wandb_init.py:init():936] updated telemetry
+2026-01-03 03:36:12,408 INFO    MainThread:217558 [wandb_init.py:init():960] communicating run to backend with 90.0 second timeout
+2026-01-03 03:36:13,373 INFO    MainThread:217558 [wandb_init.py:init():1011] starting run threads in backend
+2026-01-03 03:36:13,535 INFO    MainThread:217558 [wandb_run.py:_console_start():2494] atexit reg
+2026-01-03 03:36:13,535 INFO    MainThread:217558 [wandb_run.py:_redirect():2342] redirect: wrap_raw
+2026-01-03 03:36:13,535 INFO    MainThread:217558 [wandb_run.py:_redirect():2411] Wrapping output streams.
+2026-01-03 03:36:13,535 INFO    MainThread:217558 [wandb_run.py:_redirect():2434] Redirects installed.
+2026-01-03 03:36:13,538 INFO    MainThread:217558 [wandb_init.py:init():1057] run started, returning control to user process
+2026-01-03 03:38:06,394 INFO    MainThread:217558 [wandb_run.py:_finish():2260] finishing run sarath11-iit-madras/rnn-seq2seq/3r2qblf6
+2026-01-03 03:38:06,395 INFO    MainThread:217558 [wandb_run.py:_atexit_cleanup():2459] got exitcode: 0
+2026-01-03 03:38:06,395 INFO    MainThread:217558 [wandb_run.py:_restore():2441] restore
+2026-01-03 03:38:06,395 INFO    MainThread:217558 [wandb_run.py:_restore():2447] restore done
+2026-01-03 03:38:11,691 INFO    MainThread:217558 [wandb_run.py:_footer_sync_info():3855] logging synced files

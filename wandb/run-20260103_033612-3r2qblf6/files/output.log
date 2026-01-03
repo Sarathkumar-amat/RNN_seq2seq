@@ -1,0 +1,22 @@
+Epoch 01 | train 1.5149 | val 2.3687 | acc 0.505
+➤ Validation improved from inf → 2.3687. Saving checkpoint.
+Epoch 02 | train 0.5958 | val 1.9057 | acc 0.656
+➤ Validation improved from 2.3687 → 1.9057. Saving checkpoint.
+Epoch 03 | train 0.4238 | val 1.7945 | acc 0.701
+➤ Validation improved from 1.9057 → 1.7945. Saving checkpoint.
+Epoch 04 | train 0.3441 | val 1.8057 | acc 0.718
+➤ No improvement for 1 epoch(s).
+Epoch 05 | train 0.2934 | val 1.7380 | acc 0.735
+➤ Validation improved from 1.7945 → 1.7380. Saving checkpoint.
+Epoch 06 | train 0.2563 | val 1.7449 | acc 0.746
+➤ No improvement for 1 epoch(s).
+Epoch 07 | train 0.2279 | val 1.8209 | acc 0.749
+➤ No improvement for 2 epoch(s).
+Epoch 08 | train 0.2043 | val 1.7746 | acc 0.761
+➤ No improvement for 3 epoch(s).
+Epoch 09 | train 0.1849 | val 1.8251 | acc 0.762
+➤ No improvement for 4 epoch(s).
+Epoch 10 | train 0.1678 | val 1.8750 | acc 0.758
+➤ No improvement for 5 epoch(s).
+
+EARLY STOPPING TRIGGERED!
