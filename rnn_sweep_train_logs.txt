@@ -1,0 +1,696 @@
+      native    roman  freq
+0     ஃபியட்     fiat     2
+1     ஃபியட்   phiyat     1
+2     ஃபியட்    piyat     1
+3  ஃபிரான்ஸ்  firaans     1
+4  ஃபிரான்ஸ்   france     2 68218 6827
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'a': 4, 'b': 5, 'c': 6, 'd': 7, 'e': 8, 'f': 9, 'g': 10, 'h': 11, 'i': 12, 'j': 13, 'k': 14, 'l': 15, 'm': 16, 'n': 17, 'o': 18, 'p': 19, 'q': 20, 'r': 21, 's': 22, 't': 23, 'u': 24, 'v': 25, 'w': 26, 'x': 27, 'y': 28, 'z': 29}
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'ஃ': 4, 'அ': 5, 'ஆ': 6, 'இ': 7, 'ஈ': 8, 'உ': 9, 'ஊ': 10, 'எ': 11, 'ஏ': 12, 'ஐ': 13, 'ஒ': 14, 'ஓ': 15, 'க': 16, 'ங': 17, 'ச': 18, 'ஜ': 19, 'ஞ': 20, 'ட': 21, 'ண': 22, 'த': 23, 'ந': 24, 'ன': 25, 'ப': 26, 'ம': 27, 'ய': 28, 'ர': 29, 'ற': 30, 'ல': 31, 'ள': 32, 'ழ': 33, 'வ': 34, 'ஷ': 35, 'ஸ': 36, 'ஹ': 37, 'ா': 38, 'ி': 39, 'ீ': 40, 'ு': 41, 'ூ': 42, 'ெ': 43, 'ே': 44, 'ை': 45, 'ொ': 46, 'ோ': 47, 'ௌ': 48, '்': 49}
+vocab size input:30
+vocab size target:50
+W&B config: {'batch_size': 64, 'beam_size': 1, 'cell_type': 'gru', 'dec_layers': 1, 'dropout': 0.2, 'embed': 128, 'enc_layers': 3, 'hidden': 128, 'learning_rate': 0.0001}
+Epoch 01 | train 2.5305 | val 2.0540 | acc 0.427
+➤ Validation improved from inf → 2.0540. Saving checkpoint.
+Epoch 02 | train 1.9130 | val 1.7740 | acc 0.499
+➤ Validation improved from 2.0540 → 1.7740. Saving checkpoint.
+Epoch 03 | train 1.7253 | val 1.6381 | acc 0.533
+➤ Validation improved from 1.7740 → 1.6381. Saving checkpoint.
+Epoch 04 | train 1.6035 | val 1.5227 | acc 0.563
+➤ Validation improved from 1.6381 → 1.5227. Saving checkpoint.
+Epoch 05 | train 1.4838 | val 1.3781 | acc 0.599
+➤ Validation improved from 1.5227 → 1.3781. Saving checkpoint.
+Epoch 06 | train 1.3519 | val 1.2293 | acc 0.637
+➤ Validation improved from 1.3781 → 1.2293. Saving checkpoint.
+Epoch 07 | train 1.2285 | val 1.1006 | acc 0.674
+➤ Validation improved from 1.2293 → 1.1006. Saving checkpoint.
+Epoch 08 | train 1.1136 | val 0.9924 | acc 0.706
+➤ Validation improved from 1.1006 → 0.9924. Saving checkpoint.
+Epoch 09 | train 1.0199 | val 0.9075 | acc 0.732
+➤ Validation improved from 0.9924 → 0.9075. Saving checkpoint.
+Epoch 10 | train 0.9425 | val 0.8429 | acc 0.751
+➤ Validation improved from 0.9075 → 0.8429. Saving checkpoint.
+Epoch 11 | train 0.8799 | val 0.7874 | acc 0.771
+➤ Validation improved from 0.8429 → 0.7874. Saving checkpoint.
+Epoch 12 | train 0.8260 | val 0.7367 | acc 0.788
+➤ Validation improved from 0.7874 → 0.7367. Saving checkpoint.
+Epoch 13 | train 0.7814 | val 0.6967 | acc 0.799
+➤ Validation improved from 0.7367 → 0.6967. Saving checkpoint.
+Epoch 14 | train 0.7417 | val 0.6609 | acc 0.812
+➤ Validation improved from 0.6967 → 0.6609. Saving checkpoint.
+Epoch 15 | train 0.7087 | val 0.6393 | acc 0.820
+➤ Validation improved from 0.6609 → 0.6393. Saving checkpoint.
+Epoch 16 | train 0.6783 | val 0.6110 | acc 0.828
+➤ Validation improved from 0.6393 → 0.6110. Saving checkpoint.
+Epoch 17 | train 0.6523 | val 0.5918 | acc 0.834
+➤ Validation improved from 0.6110 → 0.5918. Saving checkpoint.
+Epoch 18 | train 0.6288 | val 0.5731 | acc 0.841
+➤ Validation improved from 0.5918 → 0.5731. Saving checkpoint.
+Epoch 19 | train 0.6055 | val 0.5543 | acc 0.846
+➤ Validation improved from 0.5731 → 0.5543. Saving checkpoint.
+Epoch 20 | train 0.5859 | val 0.5402 | acc 0.852
+➤ Validation improved from 0.5543 → 0.5402. Saving checkpoint.
+Epoch 21 | train 0.5678 | val 0.5276 | acc 0.855
+➤ Validation improved from 0.5402 → 0.5276. Saving checkpoint.
+Epoch 22 | train 0.5508 | val 0.5169 | acc 0.858
+➤ Validation improved from 0.5276 → 0.5169. Saving checkpoint.
+Epoch 23 | train 0.5353 | val 0.5032 | acc 0.864
+➤ Validation improved from 0.5169 → 0.5032. Saving checkpoint.
+Epoch 24 | train 0.5208 | val 0.4927 | acc 0.867
+➤ Validation improved from 0.5032 → 0.4927. Saving checkpoint.
+Epoch 25 | train 0.5071 | val 0.4843 | acc 0.871
+➤ Validation improved from 0.4927 → 0.4843. Saving checkpoint.
+Epoch 26 | train 0.4937 | val 0.4758 | acc 0.873
+➤ Validation improved from 0.4843 → 0.4758. Saving checkpoint.
+Epoch 27 | train 0.4829 | val 0.4696 | acc 0.876
+➤ Validation improved from 0.4758 → 0.4696. Saving checkpoint.
+Epoch 28 | train 0.4708 | val 0.4625 | acc 0.878
+➤ Validation improved from 0.4696 → 0.4625. Saving checkpoint.
+Epoch 29 | train 0.4611 | val 0.4573 | acc 0.879
+➤ Validation improved from 0.4625 → 0.4573. Saving checkpoint.
+Epoch 30 | train 0.4506 | val 0.4544 | acc 0.878
+➤ Validation improved from 0.4573 → 0.4544. Saving checkpoint.
+
+Training complete. Best model saved to: best_model.pt
+      native    roman  freq
+0     ஃபியட்     fiat     2
+1     ஃபியட்   phiyat     1
+2     ஃபியட்    piyat     1
+3  ஃபிரான்ஸ்  firaans     1
+4  ஃபிரான்ஸ்   france     2 68218 6827
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'a': 4, 'b': 5, 'c': 6, 'd': 7, 'e': 8, 'f': 9, 'g': 10, 'h': 11, 'i': 12, 'j': 13, 'k': 14, 'l': 15, 'm': 16, 'n': 17, 'o': 18, 'p': 19, 'q': 20, 'r': 21, 's': 22, 't': 23, 'u': 24, 'v': 25, 'w': 26, 'x': 27, 'y': 28, 'z': 29}
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'ஃ': 4, 'அ': 5, 'ஆ': 6, 'இ': 7, 'ஈ': 8, 'உ': 9, 'ஊ': 10, 'எ': 11, 'ஏ': 12, 'ஐ': 13, 'ஒ': 14, 'ஓ': 15, 'க': 16, 'ங': 17, 'ச': 18, 'ஜ': 19, 'ஞ': 20, 'ட': 21, 'ண': 22, 'த': 23, 'ந': 24, 'ன': 25, 'ப': 26, 'ம': 27, 'ய': 28, 'ர': 29, 'ற': 30, 'ல': 31, 'ள': 32, 'ழ': 33, 'வ': 34, 'ஷ': 35, 'ஸ': 36, 'ஹ': 37, 'ா': 38, 'ி': 39, 'ீ': 40, 'ு': 41, 'ூ': 42, 'ெ': 43, 'ே': 44, 'ை': 45, 'ொ': 46, 'ோ': 47, 'ௌ': 48, '்': 49}
+vocab size input:30
+vocab size target:50
+W&B config: {'batch_size': 64, 'beam_size': 1, 'cell_type': 'lstm', 'dec_layers': 2, 'dropout': 0.2, 'embed': 128, 'enc_layers': 3, 'hidden': 256, 'learning_rate': 0.0001}
+Epoch 01 | train 2.4057 | val 1.9119 | acc 0.465
+➤ Validation improved from inf → 1.9119. Saving checkpoint.
+Epoch 02 | train 1.6094 | val 1.2565 | acc 0.650
+➤ Validation improved from 1.9119 → 1.2565. Saving checkpoint.
+Epoch 03 | train 1.1290 | val 0.8972 | acc 0.749
+➤ Validation improved from 1.2565 → 0.8972. Saving checkpoint.
+Epoch 04 | train 0.8590 | val 0.7155 | acc 0.802
+➤ Validation improved from 0.8972 → 0.7155. Saving checkpoint.
+Epoch 05 | train 0.6996 | val 0.5943 | acc 0.834
+➤ Validation improved from 0.7155 → 0.5943. Saving checkpoint.
+Epoch 06 | train 0.5978 | val 0.5356 | acc 0.849
+➤ Validation improved from 0.5943 → 0.5356. Saving checkpoint.
+Epoch 07 | train 0.5240 | val 0.4883 | acc 0.867
+➤ Validation improved from 0.5356 → 0.4883. Saving checkpoint.
+Epoch 08 | train 0.4673 | val 0.4546 | acc 0.875
+➤ Validation improved from 0.4883 → 0.4546. Saving checkpoint.
+Epoch 09 | train 0.4228 | val 0.4275 | acc 0.882
+➤ Validation improved from 0.4546 → 0.4275. Saving checkpoint.
+Epoch 10 | train 0.3856 | val 0.4039 | acc 0.890
+➤ Validation improved from 0.4275 → 0.4039. Saving checkpoint.
+Epoch 11 | train 0.3543 | val 0.3967 | acc 0.893
+➤ Validation improved from 0.4039 → 0.3967. Saving checkpoint.
+Epoch 12 | train 0.3291 | val 0.3805 | acc 0.898
+➤ Validation improved from 0.3967 → 0.3805. Saving checkpoint.
+Epoch 13 | train 0.3062 | val 0.3703 | acc 0.900
+➤ Validation improved from 0.3805 → 0.3703. Saving checkpoint.
+Epoch 14 | train 0.2850 | val 0.3610 | acc 0.904
+➤ Validation improved from 0.3703 → 0.3610. Saving checkpoint.
+Epoch 15 | train 0.2664 | val 0.3547 | acc 0.905
+➤ Validation improved from 0.3610 → 0.3547. Saving checkpoint.
+Epoch 16 | train 0.2513 | val 0.3508 | acc 0.907
+➤ Validation improved from 0.3547 → 0.3508. Saving checkpoint.
+Epoch 17 | train 0.2363 | val 0.3517 | acc 0.907
+➤ No improvement for 1 epoch(s).
+Epoch 18 | train 0.2228 | val 0.3435 | acc 0.910
+➤ Validation improved from 0.3508 → 0.3435. Saving checkpoint.
+Epoch 19 | train 0.2113 | val 0.3462 | acc 0.910
+➤ No improvement for 1 epoch(s).
+Epoch 20 | train 0.1998 | val 0.3429 | acc 0.910
+➤ Validation improved from 0.3435 → 0.3429. Saving checkpoint.
+Epoch 21 | train 0.1892 | val 0.3401 | acc 0.911
+➤ Validation improved from 0.3429 → 0.3401. Saving checkpoint.
+Epoch 22 | train 0.1794 | val 0.3408 | acc 0.913
+➤ No improvement for 1 epoch(s).
+Epoch 23 | train 0.1711 | val 0.3395 | acc 0.914
+➤ Validation improved from 0.3401 → 0.3395. Saving checkpoint.
+Epoch 24 | train 0.1636 | val 0.3394 | acc 0.914
+➤ No improvement for 1 epoch(s).
+Epoch 25 | train 0.1547 | val 0.3401 | acc 0.914
+➤ No improvement for 2 epoch(s).
+Epoch 26 | train 0.1484 | val 0.3443 | acc 0.913
+➤ No improvement for 3 epoch(s).
+Epoch 27 | train 0.1414 | val 0.3467 | acc 0.914
+➤ No improvement for 4 epoch(s).
+Epoch 28 | train 0.1345 | val 0.3482 | acc 0.914
+➤ No improvement for 5 epoch(s).
+
+EARLY STOPPING TRIGGERED!
+
+Training complete. Best model saved to: best_model.pt
+      native    roman  freq
+0     ஃபியட்     fiat     2
+1     ஃபியட்   phiyat     1
+2     ஃபியட்    piyat     1
+3  ஃபிரான்ஸ்  firaans     1
+4  ஃபிரான்ஸ்   france     2 68218 6827
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'a': 4, 'b': 5, 'c': 6, 'd': 7, 'e': 8, 'f': 9, 'g': 10, 'h': 11, 'i': 12, 'j': 13, 'k': 14, 'l': 15, 'm': 16, 'n': 17, 'o': 18, 'p': 19, 'q': 20, 'r': 21, 's': 22, 't': 23, 'u': 24, 'v': 25, 'w': 26, 'x': 27, 'y': 28, 'z': 29}
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'ஃ': 4, 'அ': 5, 'ஆ': 6, 'இ': 7, 'ஈ': 8, 'உ': 9, 'ஊ': 10, 'எ': 11, 'ஏ': 12, 'ஐ': 13, 'ஒ': 14, 'ஓ': 15, 'க': 16, 'ங': 17, 'ச': 18, 'ஜ': 19, 'ஞ': 20, 'ட': 21, 'ண': 22, 'த': 23, 'ந': 24, 'ன': 25, 'ப': 26, 'ம': 27, 'ய': 28, 'ர': 29, 'ற': 30, 'ல': 31, 'ள': 32, 'ழ': 33, 'வ': 34, 'ஷ': 35, 'ஸ': 36, 'ஹ': 37, 'ா': 38, 'ி': 39, 'ீ': 40, 'ு': 41, 'ூ': 42, 'ெ': 43, 'ே': 44, 'ை': 45, 'ொ': 46, 'ோ': 47, 'ௌ': 48, '்': 49}
+vocab size input:30
+vocab size target:50
+W&B config: {'batch_size': 64, 'beam_size': 3, 'cell_type': 'lstm', 'dec_layers': 3, 'dropout': 0.2, 'embed': 32, 'enc_layers': 3, 'hidden': 128, 'learning_rate': 0.001}
+[1;34mwandb[0m: 
+[1;34mwandb[0m: 🚀 View run [33mrosy-sweep-22[0m at: [34mhttps://wandb.ai/sarath11-iit-madras/RNN_seq2seq/runs/zn8u3q8f[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb/run-20260106_152422-zn8u3q8f/logs[0m
+      native    roman  freq
+0     ஃபியட்     fiat     2
+1     ஃபியட்   phiyat     1
+2     ஃபியட்    piyat     1
+3  ஃபிரான்ஸ்  firaans     1
+4  ஃபிரான்ஸ்   france     2 68218 6827
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'a': 4, 'b': 5, 'c': 6, 'd': 7, 'e': 8, 'f': 9, 'g': 10, 'h': 11, 'i': 12, 'j': 13, 'k': 14, 'l': 15, 'm': 16, 'n': 17, 'o': 18, 'p': 19, 'q': 20, 'r': 21, 's': 22, 't': 23, 'u': 24, 'v': 25, 'w': 26, 'x': 27, 'y': 28, 'z': 29}
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'ஃ': 4, 'அ': 5, 'ஆ': 6, 'இ': 7, 'ஈ': 8, 'உ': 9, 'ஊ': 10, 'எ': 11, 'ஏ': 12, 'ஐ': 13, 'ஒ': 14, 'ஓ': 15, 'க': 16, 'ங': 17, 'ச': 18, 'ஜ': 19, 'ஞ': 20, 'ட': 21, 'ண': 22, 'த': 23, 'ந': 24, 'ன': 25, 'ப': 26, 'ம': 27, 'ய': 28, 'ர': 29, 'ற': 30, 'ல': 31, 'ள': 32, 'ழ': 33, 'வ': 34, 'ஷ': 35, 'ஸ': 36, 'ஹ': 37, 'ா': 38, 'ி': 39, 'ீ': 40, 'ு': 41, 'ூ': 42, 'ெ': 43, 'ே': 44, 'ை': 45, 'ொ': 46, 'ோ': 47, 'ௌ': 48, '்': 49}
+vocab size input:30
+vocab size target:50
+W&B config: {'batch_size': 64, 'beam_size': 3, 'cell_type': 'rnn', 'dec_layers': 2, 'dropout': 0.3, 'embed': 16, 'enc_layers': 1, 'hidden': 64, 'learning_rate': 0.0005}
+[1;34mwandb[0m: 
+[1;34mwandb[0m: 🚀 View run [33mflowing-sweep-23[0m at: [34mhttps://wandb.ai/sarath11-iit-madras/RNN_seq2seq/runs/3do36qhn[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb/run-20260106_152515-3do36qhn/logs[0m
+      native    roman  freq
+0     ஃபியட்     fiat     2
+1     ஃபியட்   phiyat     1
+2     ஃபியட்    piyat     1
+3  ஃபிரான்ஸ்  firaans     1
+4  ஃபிரான்ஸ்   france     2 68218 6827
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'a': 4, 'b': 5, 'c': 6, 'd': 7, 'e': 8, 'f': 9, 'g': 10, 'h': 11, 'i': 12, 'j': 13, 'k': 14, 'l': 15, 'm': 16, 'n': 17, 'o': 18, 'p': 19, 'q': 20, 'r': 21, 's': 22, 't': 23, 'u': 24, 'v': 25, 'w': 26, 'x': 27, 'y': 28, 'z': 29}
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'ஃ': 4, 'அ': 5, 'ஆ': 6, 'இ': 7, 'ஈ': 8, 'உ': 9, 'ஊ': 10, 'எ': 11, 'ஏ': 12, 'ஐ': 13, 'ஒ': 14, 'ஓ': 15, 'க': 16, 'ங': 17, 'ச': 18, 'ஜ': 19, 'ஞ': 20, 'ட': 21, 'ண': 22, 'த': 23, 'ந': 24, 'ன': 25, 'ப': 26, 'ம': 27, 'ய': 28, 'ர': 29, 'ற': 30, 'ல': 31, 'ள': 32, 'ழ': 33, 'வ': 34, 'ஷ': 35, 'ஸ': 36, 'ஹ': 37, 'ா': 38, 'ி': 39, 'ீ': 40, 'ு': 41, 'ூ': 42, 'ெ': 43, 'ே': 44, 'ை': 45, 'ொ': 46, 'ோ': 47, 'ௌ': 48, '்': 49}
+vocab size input:30
+vocab size target:50
+W&B config: {'batch_size': 64, 'beam_size': 3, 'cell_type': 'gru', 'dec_layers': 3, 'dropout': 0.3, 'embed': 128, 'enc_layers': 2, 'hidden': 128, 'learning_rate': 0.0001}
+[1;34mwandb[0m: 
+[1;34mwandb[0m: 🚀 View run [33mglowing-sweep-24[0m at: [34mhttps://wandb.ai/sarath11-iit-madras/RNN_seq2seq/runs/txgi14jm[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb/run-20260106_152603-txgi14jm/logs[0m
+      native    roman  freq
+0     ஃபியட்     fiat     2
+1     ஃபியட்   phiyat     1
+2     ஃபியட்    piyat     1
+3  ஃபிரான்ஸ்  firaans     1
+4  ஃபிரான்ஸ்   france     2 68218 6827
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'a': 4, 'b': 5, 'c': 6, 'd': 7, 'e': 8, 'f': 9, 'g': 10, 'h': 11, 'i': 12, 'j': 13, 'k': 14, 'l': 15, 'm': 16, 'n': 17, 'o': 18, 'p': 19, 'q': 20, 'r': 21, 's': 22, 't': 23, 'u': 24, 'v': 25, 'w': 26, 'x': 27, 'y': 28, 'z': 29}
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'ஃ': 4, 'அ': 5, 'ஆ': 6, 'இ': 7, 'ஈ': 8, 'உ': 9, 'ஊ': 10, 'எ': 11, 'ஏ': 12, 'ஐ': 13, 'ஒ': 14, 'ஓ': 15, 'க': 16, 'ங': 17, 'ச': 18, 'ஜ': 19, 'ஞ': 20, 'ட': 21, 'ண': 22, 'த': 23, 'ந': 24, 'ன': 25, 'ப': 26, 'ம': 27, 'ய': 28, 'ர': 29, 'ற': 30, 'ல': 31, 'ள': 32, 'ழ': 33, 'வ': 34, 'ஷ': 35, 'ஸ': 36, 'ஹ': 37, 'ா': 38, 'ி': 39, 'ீ': 40, 'ு': 41, 'ூ': 42, 'ெ': 43, 'ே': 44, 'ை': 45, 'ொ': 46, 'ோ': 47, 'ௌ': 48, '்': 49}
+vocab size input:30
+vocab size target:50
+W&B config: {'batch_size': 64, 'beam_size': 1, 'cell_type': 'lstm', 'dec_layers': 1, 'dropout': 0.2, 'embed': 256, 'enc_layers': 1, 'hidden': 64, 'learning_rate': 0.0001}
+Epoch 01 | train 2.7664 | val 2.3267 | acc 0.353
+➤ Validation improved from inf → 2.3267. Saving checkpoint.
+Epoch 02 | train 2.2044 | val 2.0598 | acc 0.436
+➤ Validation improved from 2.3267 → 2.0598. Saving checkpoint.
+Epoch 03 | train 1.9993 | val 1.8755 | acc 0.484
+➤ Validation improved from 2.0598 → 1.8755. Saving checkpoint.
+Epoch 04 | train 1.8389 | val 1.7075 | acc 0.530
+➤ Validation improved from 1.8755 → 1.7075. Saving checkpoint.
+Epoch 05 | train 1.7133 | val 1.5814 | acc 0.559
+➤ Validation improved from 1.7075 → 1.5814. Saving checkpoint.
+      native    roman  freq
+0     ஃபியட்     fiat     2
+1     ஃபியட்   phiyat     1
+2     ஃபியட்    piyat     1
+3  ஃபிரான்ஸ்  firaans     1
+4  ஃபிரான்ஸ்   france     2 68218 6827
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'a': 4, 'b': 5, 'c': 6, 'd': 7, 'e': 8, 'f': 9, 'g': 10, 'h': 11, 'i': 12, 'j': 13, 'k': 14, 'l': 15, 'm': 16, 'n': 17, 'o': 18, 'p': 19, 'q': 20, 'r': 21, 's': 22, 't': 23, 'u': 24, 'v': 25, 'w': 26, 'x': 27, 'y': 28, 'z': 29}
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'ஃ': 4, 'அ': 5, 'ஆ': 6, 'இ': 7, 'ஈ': 8, 'உ': 9, 'ஊ': 10, 'எ': 11, 'ஏ': 12, 'ஐ': 13, 'ஒ': 14, 'ஓ': 15, 'க': 16, 'ங': 17, 'ச': 18, 'ஜ': 19, 'ஞ': 20, 'ட': 21, 'ண': 22, 'த': 23, 'ந': 24, 'ன': 25, 'ப': 26, 'ம': 27, 'ய': 28, 'ர': 29, 'ற': 30, 'ல': 31, 'ள': 32, 'ழ': 33, 'வ': 34, 'ஷ': 35, 'ஸ': 36, 'ஹ': 37, 'ா': 38, 'ி': 39, 'ீ': 40, 'ு': 41, 'ூ': 42, 'ெ': 43, 'ே': 44, 'ை': 45, 'ொ': 46, 'ோ': 47, 'ௌ': 48, '்': 49}
+vocab size input:30
+vocab size target:50
+W&B config: {'batch_size': 64, 'beam_size': 3, 'cell_type': 'lstm', 'dec_layers': 3, 'dropout': 0.2, 'embed': 64, 'enc_layers': 2, 'hidden': 128, 'learning_rate': 0.0005}
+[1;34mwandb[0m: 
+[1;34mwandb[0m: 🚀 View run [33mcosmic-sweep-27[0m at: [34mhttps://wandb.ai/sarath11-iit-madras/RNN_seq2seq/runs/14x00h8t[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb/run-20260106_153214-14x00h8t/logs[0m
+      native    roman  freq
+0     ஃபியட்     fiat     2
+1     ஃபியட்   phiyat     1
+2     ஃபியட்    piyat     1
+3  ஃபிரான்ஸ்  firaans     1
+4  ஃபிரான்ஸ்   france     2 68218 6827
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'a': 4, 'b': 5, 'c': 6, 'd': 7, 'e': 8, 'f': 9, 'g': 10, 'h': 11, 'i': 12, 'j': 13, 'k': 14, 'l': 15, 'm': 16, 'n': 17, 'o': 18, 'p': 19, 'q': 20, 'r': 21, 's': 22, 't': 23, 'u': 24, 'v': 25, 'w': 26, 'x': 27, 'y': 28, 'z': 29}
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'ஃ': 4, 'அ': 5, 'ஆ': 6, 'இ': 7, 'ஈ': 8, 'உ': 9, 'ஊ': 10, 'எ': 11, 'ஏ': 12, 'ஐ': 13, 'ஒ': 14, 'ஓ': 15, 'க': 16, 'ங': 17, 'ச': 18, 'ஜ': 19, 'ஞ': 20, 'ட': 21, 'ண': 22, 'த': 23, 'ந': 24, 'ன': 25, 'ப': 26, 'ம': 27, 'ய': 28, 'ர': 29, 'ற': 30, 'ல': 31, 'ள': 32, 'ழ': 33, 'வ': 34, 'ஷ': 35, 'ஸ': 36, 'ஹ': 37, 'ா': 38, 'ி': 39, 'ீ': 40, 'ு': 41, 'ூ': 42, 'ெ': 43, 'ே': 44, 'ை': 45, 'ொ': 46, 'ோ': 47, 'ௌ': 48, '்': 49}
+vocab size input:30
+vocab size target:50
+W&B config: {'batch_size': 32, 'beam_size': 5, 'cell_type': 'rnn', 'dec_layers': 1, 'dropout': 0.2, 'embed': 128, 'enc_layers': 1, 'hidden': 256, 'learning_rate': 0.001}
+[1;34mwandb[0m: 
+[1;34mwandb[0m: 🚀 View run [33mvisionary-sweep-28[0m at: [34mhttps://wandb.ai/sarath11-iit-madras/RNN_seq2seq/runs/1bqegaza[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb/run-20260106_153307-1bqegaza/logs[0m
+      native    roman  freq
+0     ஃபியட்     fiat     2
+1     ஃபியட்   phiyat     1
+2     ஃபியட்    piyat     1
+3  ஃபிரான்ஸ்  firaans     1
+4  ஃபிரான்ஸ்   france     2 68218 6827
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'a': 4, 'b': 5, 'c': 6, 'd': 7, 'e': 8, 'f': 9, 'g': 10, 'h': 11, 'i': 12, 'j': 13, 'k': 14, 'l': 15, 'm': 16, 'n': 17, 'o': 18, 'p': 19, 'q': 20, 'r': 21, 's': 22, 't': 23, 'u': 24, 'v': 25, 'w': 26, 'x': 27, 'y': 28, 'z': 29}
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'ஃ': 4, 'அ': 5, 'ஆ': 6, 'இ': 7, 'ஈ': 8, 'உ': 9, 'ஊ': 10, 'எ': 11, 'ஏ': 12, 'ஐ': 13, 'ஒ': 14, 'ஓ': 15, 'க': 16, 'ங': 17, 'ச': 18, 'ஜ': 19, 'ஞ': 20, 'ட': 21, 'ண': 22, 'த': 23, 'ந': 24, 'ன': 25, 'ப': 26, 'ம': 27, 'ய': 28, 'ர': 29, 'ற': 30, 'ல': 31, 'ள': 32, 'ழ': 33, 'வ': 34, 'ஷ': 35, 'ஸ': 36, 'ஹ': 37, 'ா': 38, 'ி': 39, 'ீ': 40, 'ு': 41, 'ூ': 42, 'ெ': 43, 'ே': 44, 'ை': 45, 'ொ': 46, 'ோ': 47, 'ௌ': 48, '்': 49}
+vocab size input:30
+vocab size target:50
+W&B config: {'batch_size': 64, 'beam_size': 3, 'cell_type': 'lstm', 'dec_layers': 3, 'dropout': 0.3, 'embed': 16, 'enc_layers': 2, 'hidden': 64, 'learning_rate': 0.0005}
+[1;34mwandb[0m: 
+[1;34mwandb[0m: 🚀 View run [33mcomfy-sweep-29[0m at: [34mhttps://wandb.ai/sarath11-iit-madras/RNN_seq2seq/runs/63fbgh3d[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb/run-20260106_153422-63fbgh3d/logs[0m
+      native    roman  freq
+0     ஃபியட்     fiat     2
+1     ஃபியட்   phiyat     1
+2     ஃபியட்    piyat     1
+3  ஃபிரான்ஸ்  firaans     1
+4  ஃபிரான்ஸ்   france     2 68218 6827
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'a': 4, 'b': 5, 'c': 6, 'd': 7, 'e': 8, 'f': 9, 'g': 10, 'h': 11, 'i': 12, 'j': 13, 'k': 14, 'l': 15, 'm': 16, 'n': 17, 'o': 18, 'p': 19, 'q': 20, 'r': 21, 's': 22, 't': 23, 'u': 24, 'v': 25, 'w': 26, 'x': 27, 'y': 28, 'z': 29}
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'ஃ': 4, 'அ': 5, 'ஆ': 6, 'இ': 7, 'ஈ': 8, 'உ': 9, 'ஊ': 10, 'எ': 11, 'ஏ': 12, 'ஐ': 13, 'ஒ': 14, 'ஓ': 15, 'க': 16, 'ங': 17, 'ச': 18, 'ஜ': 19, 'ஞ': 20, 'ட': 21, 'ண': 22, 'த': 23, 'ந': 24, 'ன': 25, 'ப': 26, 'ம': 27, 'ய': 28, 'ர': 29, 'ற': 30, 'ல': 31, 'ள': 32, 'ழ': 33, 'வ': 34, 'ஷ': 35, 'ஸ': 36, 'ஹ': 37, 'ா': 38, 'ி': 39, 'ீ': 40, 'ு': 41, 'ூ': 42, 'ெ': 43, 'ே': 44, 'ை': 45, 'ொ': 46, 'ோ': 47, 'ௌ': 48, '்': 49}
+vocab size input:30
+vocab size target:50
+W&B config: {'batch_size': 64, 'beam_size': 5, 'cell_type': 'lstm', 'dec_layers': 1, 'dropout': 0.2, 'embed': 256, 'enc_layers': 1, 'hidden': 128, 'learning_rate': 0.001}
+[1;34mwandb[0m: 
+[1;34mwandb[0m: 🚀 View run [33mgood-sweep-30[0m at: [34mhttps://wandb.ai/sarath11-iit-madras/RNN_seq2seq/runs/6xsk3h1h[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb/run-20260106_153515-6xsk3h1h/logs[0m
+      native    roman  freq
+0     ஃபியட்     fiat     2
+1     ஃபியட்   phiyat     1
+2     ஃபியட்    piyat     1
+3  ஃபிரான்ஸ்  firaans     1
+4  ஃபிரான்ஸ்   france     2 68218 6827
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'a': 4, 'b': 5, 'c': 6, 'd': 7, 'e': 8, 'f': 9, 'g': 10, 'h': 11, 'i': 12, 'j': 13, 'k': 14, 'l': 15, 'm': 16, 'n': 17, 'o': 18, 'p': 19, 'q': 20, 'r': 21, 's': 22, 't': 23, 'u': 24, 'v': 25, 'w': 26, 'x': 27, 'y': 28, 'z': 29}
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'ஃ': 4, 'அ': 5, 'ஆ': 6, 'இ': 7, 'ஈ': 8, 'உ': 9, 'ஊ': 10, 'எ': 11, 'ஏ': 12, 'ஐ': 13, 'ஒ': 14, 'ஓ': 15, 'க': 16, 'ங': 17, 'ச': 18, 'ஜ': 19, 'ஞ': 20, 'ட': 21, 'ண': 22, 'த': 23, 'ந': 24, 'ன': 25, 'ப': 26, 'ம': 27, 'ய': 28, 'ர': 29, 'ற': 30, 'ல': 31, 'ள': 32, 'ழ': 33, 'வ': 34, 'ஷ': 35, 'ஸ': 36, 'ஹ': 37, 'ா': 38, 'ி': 39, 'ீ': 40, 'ு': 41, 'ூ': 42, 'ெ': 43, 'ே': 44, 'ை': 45, 'ொ': 46, 'ோ': 47, 'ௌ': 48, '்': 49}
+vocab size input:30
+vocab size target:50
+W&B config: {'batch_size': 32, 'beam_size': 1, 'cell_type': 'gru', 'dec_layers': 3, 'dropout': 0.3, 'embed': 32, 'enc_layers': 1, 'hidden': 128, 'learning_rate': 0.001}
+Epoch 01 | train 1.4832 | val 0.7191 | acc 0.793
+➤ Validation improved from inf → 0.7191. Saving checkpoint.
+Epoch 02 | train 0.7193 | val 0.5094 | acc 0.858
+➤ Validation improved from 0.7191 → 0.5094. Saving checkpoint.
+Epoch 03 | train 0.5651 | val 0.4392 | acc 0.881
+➤ Validation improved from 0.5094 → 0.4392. Saving checkpoint.
+Epoch 04 | train 0.4917 | val 0.4130 | acc 0.888
+➤ Validation improved from 0.4392 → 0.4130. Saving checkpoint.
+Epoch 05 | train 0.4441 | val 0.3993 | acc 0.894
+➤ Validation improved from 0.4130 → 0.3993. Saving checkpoint.
+Epoch 06 | train 0.4142 | val 0.3852 | acc 0.897
+➤ Validation improved from 0.3993 → 0.3852. Saving checkpoint.
+Epoch 07 | train 0.3903 | val 0.3750 | acc 0.901
+➤ Validation improved from 0.3852 → 0.3750. Saving checkpoint.
+Epoch 08 | train 0.3700 | val 0.3731 | acc 0.901
+➤ Validation improved from 0.3750 → 0.3731. Saving checkpoint.
+Epoch 09 | train 0.3550 | val 0.3642 | acc 0.903
+➤ Validation improved from 0.3731 → 0.3642. Saving checkpoint.
+Epoch 10 | train 0.3433 | val 0.3629 | acc 0.903
+➤ Validation improved from 0.3642 → 0.3629. Saving checkpoint.
+Epoch 11 | train 0.3320 | val 0.3558 | acc 0.905
+➤ Validation improved from 0.3629 → 0.3558. Saving checkpoint.
+Epoch 12 | train 0.3214 | val 0.3573 | acc 0.906
+➤ No improvement for 1 epoch(s).
+Epoch 13 | train 0.3146 | val 0.3516 | acc 0.908
+➤ Validation improved from 0.3558 → 0.3516. Saving checkpoint.
+Epoch 14 | train 0.3062 | val 0.3583 | acc 0.906
+➤ No improvement for 1 epoch(s).
+Epoch 15 | train 0.2993 | val 0.3554 | acc 0.907
+➤ No improvement for 2 epoch(s).
+Epoch 16 | train 0.2926 | val 0.3536 | acc 0.910
+➤ No improvement for 3 epoch(s).
+Epoch 17 | train 0.2880 | val 0.3561 | acc 0.910
+➤ No improvement for 4 epoch(s).
+Epoch 18 | train 0.2827 | val 0.3511 | acc 0.909
+➤ Validation improved from 0.3516 → 0.3511. Saving checkpoint.
+Epoch 19 | train 0.2772 | val 0.3533 | acc 0.909
+➤ No improvement for 1 epoch(s).
+Epoch 20 | train 0.2734 | val 0.3564 | acc 0.908
+➤ No improvement for 2 epoch(s).
+Epoch 21 | train 0.2695 | val 0.3512 | acc 0.910
+➤ No improvement for 3 epoch(s).
+Epoch 22 | train 0.2655 | val 0.3518 | acc 0.911
+➤ No improvement for 4 epoch(s).
+Epoch 23 | train 0.2625 | val 0.3476 | acc 0.912
+➤ Validation improved from 0.3511 → 0.3476. Saving checkpoint.
+Epoch 24 | train 0.2586 | val 0.3491 | acc 0.911
+➤ No improvement for 1 epoch(s).
+Epoch 25 | train 0.2548 | val 0.3507 | acc 0.912
+➤ No improvement for 2 epoch(s).
+Epoch 26 | train 0.2534 | val 0.3517 | acc 0.911
+➤ No improvement for 3 epoch(s).
+Epoch 27 | train 0.2504 | val 0.3485 | acc 0.913
+➤ No improvement for 4 epoch(s).
+Epoch 28 | train 0.2476 | val 0.3466 | acc 0.912
+➤ Validation improved from 0.3476 → 0.3466. Saving checkpoint.
+Epoch 29 | train 0.2446 | val 0.3581 | acc 0.910
+➤ No improvement for 1 epoch(s).
+Epoch 30 | train 0.2434 | val 0.3540 | acc 0.911
+➤ No improvement for 2 epoch(s).
+
+Training complete. Best model saved to: best_model.pt
+      native    roman  freq
+0     ஃபியட்     fiat     2
+1     ஃபியட்   phiyat     1
+2     ஃபியட்    piyat     1
+3  ஃபிரான்ஸ்  firaans     1
+4  ஃபிரான்ஸ்   france     2 68218 6827
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'a': 4, 'b': 5, 'c': 6, 'd': 7, 'e': 8, 'f': 9, 'g': 10, 'h': 11, 'i': 12, 'j': 13, 'k': 14, 'l': 15, 'm': 16, 'n': 17, 'o': 18, 'p': 19, 'q': 20, 'r': 21, 's': 22, 't': 23, 'u': 24, 'v': 25, 'w': 26, 'x': 27, 'y': 28, 'z': 29}
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'ஃ': 4, 'அ': 5, 'ஆ': 6, 'இ': 7, 'ஈ': 8, 'உ': 9, 'ஊ': 10, 'எ': 11, 'ஏ': 12, 'ஐ': 13, 'ஒ': 14, 'ஓ': 15, 'க': 16, 'ங': 17, 'ச': 18, 'ஜ': 19, 'ஞ': 20, 'ட': 21, 'ண': 22, 'த': 23, 'ந': 24, 'ன': 25, 'ப': 26, 'ம': 27, 'ய': 28, 'ர': 29, 'ற': 30, 'ல': 31, 'ள': 32, 'ழ': 33, 'வ': 34, 'ஷ': 35, 'ஸ': 36, 'ஹ': 37, 'ா': 38, 'ி': 39, 'ீ': 40, 'ு': 41, 'ூ': 42, 'ெ': 43, 'ே': 44, 'ை': 45, 'ொ': 46, 'ோ': 47, 'ௌ': 48, '்': 49}
+vocab size input:30
+vocab size target:50
+W&B config: {'batch_size': 64, 'beam_size': 3, 'cell_type': 'rnn', 'dec_layers': 1, 'dropout': 0.2, 'embed': 128, 'enc_layers': 3, 'hidden': 256, 'learning_rate': 0.001}
+[1;34mwandb[0m: 
+[1;34mwandb[0m: 🚀 View run [33mruby-sweep-33[0m at: [34mhttps://wandb.ai/sarath11-iit-madras/RNN_seq2seq/runs/jzj4b6zd[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb/run-20260106_160912-jzj4b6zd/logs[0m
+      native    roman  freq
+0     ஃபியட்     fiat     2
+1     ஃபியட்   phiyat     1
+2     ஃபியட்    piyat     1
+3  ஃபிரான்ஸ்  firaans     1
+4  ஃபிரான்ஸ்   france     2 68218 6827
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'a': 4, 'b': 5, 'c': 6, 'd': 7, 'e': 8, 'f': 9, 'g': 10, 'h': 11, 'i': 12, 'j': 13, 'k': 14, 'l': 15, 'm': 16, 'n': 17, 'o': 18, 'p': 19, 'q': 20, 'r': 21, 's': 22, 't': 23, 'u': 24, 'v': 25, 'w': 26, 'x': 27, 'y': 28, 'z': 29}
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'ஃ': 4, 'அ': 5, 'ஆ': 6, 'இ': 7, 'ஈ': 8, 'உ': 9, 'ஊ': 10, 'எ': 11, 'ஏ': 12, 'ஐ': 13, 'ஒ': 14, 'ஓ': 15, 'க': 16, 'ங': 17, 'ச': 18, 'ஜ': 19, 'ஞ': 20, 'ட': 21, 'ண': 22, 'த': 23, 'ந': 24, 'ன': 25, 'ப': 26, 'ம': 27, 'ய': 28, 'ர': 29, 'ற': 30, 'ல': 31, 'ள': 32, 'ழ': 33, 'வ': 34, 'ஷ': 35, 'ஸ': 36, 'ஹ': 37, 'ா': 38, 'ி': 39, 'ீ': 40, 'ு': 41, 'ூ': 42, 'ெ': 43, 'ே': 44, 'ை': 45, 'ொ': 46, 'ோ': 47, 'ௌ': 48, '்': 49}
+vocab size input:30
+vocab size target:50
+W&B config: {'batch_size': 64, 'beam_size': 5, 'cell_type': 'gru', 'dec_layers': 2, 'dropout': 0.2, 'embed': 128, 'enc_layers': 1, 'hidden': 256, 'learning_rate': 0.0005}
+[1;34mwandb[0m: 
+[1;34mwandb[0m: 🚀 View run [33mdry-sweep-34[0m at: [34mhttps://wandb.ai/sarath11-iit-madras/RNN_seq2seq/runs/kfljw6vq[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb/run-20260106_161004-kfljw6vq/logs[0m
+      native    roman  freq
+0     ஃபியட்     fiat     2
+1     ஃபியட்   phiyat     1
+2     ஃபியட்    piyat     1
+3  ஃபிரான்ஸ்  firaans     1
+4  ஃபிரான்ஸ்   france     2 68218 6827
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'a': 4, 'b': 5, 'c': 6, 'd': 7, 'e': 8, 'f': 9, 'g': 10, 'h': 11, 'i': 12, 'j': 13, 'k': 14, 'l': 15, 'm': 16, 'n': 17, 'o': 18, 'p': 19, 'q': 20, 'r': 21, 's': 22, 't': 23, 'u': 24, 'v': 25, 'w': 26, 'x': 27, 'y': 28, 'z': 29}
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'ஃ': 4, 'அ': 5, 'ஆ': 6, 'இ': 7, 'ஈ': 8, 'உ': 9, 'ஊ': 10, 'எ': 11, 'ஏ': 12, 'ஐ': 13, 'ஒ': 14, 'ஓ': 15, 'க': 16, 'ங': 17, 'ச': 18, 'ஜ': 19, 'ஞ': 20, 'ட': 21, 'ண': 22, 'த': 23, 'ந': 24, 'ன': 25, 'ப': 26, 'ம': 27, 'ய': 28, 'ர': 29, 'ற': 30, 'ல': 31, 'ள': 32, 'ழ': 33, 'வ': 34, 'ஷ': 35, 'ஸ': 36, 'ஹ': 37, 'ா': 38, 'ி': 39, 'ீ': 40, 'ு': 41, 'ூ': 42, 'ெ': 43, 'ே': 44, 'ை': 45, 'ொ': 46, 'ோ': 47, 'ௌ': 48, '்': 49}
+vocab size input:30
+vocab size target:50
+W&B config: {'batch_size': 32, 'beam_size': 3, 'cell_type': 'gru', 'dec_layers': 2, 'dropout': 0.2, 'embed': 64, 'enc_layers': 3, 'hidden': 32, 'learning_rate': 0.001}
+[1;34mwandb[0m: 
+[1;34mwandb[0m: 🚀 View run [33mhappy-sweep-36[0m at: [34mhttps://wandb.ai/sarath11-iit-madras/RNN_seq2seq/runs/bpe8qasb[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb/run-20260106_161414-bpe8qasb/logs[0m
+      native    roman  freq
+0     ஃபியட்     fiat     2
+1     ஃபியட்   phiyat     1
+2     ஃபியட்    piyat     1
+3  ஃபிரான்ஸ்  firaans     1
+4  ஃபிரான்ஸ்   france     2 68218 6827
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'a': 4, 'b': 5, 'c': 6, 'd': 7, 'e': 8, 'f': 9, 'g': 10, 'h': 11, 'i': 12, 'j': 13, 'k': 14, 'l': 15, 'm': 16, 'n': 17, 'o': 18, 'p': 19, 'q': 20, 'r': 21, 's': 22, 't': 23, 'u': 24, 'v': 25, 'w': 26, 'x': 27, 'y': 28, 'z': 29}
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'ஃ': 4, 'அ': 5, 'ஆ': 6, 'இ': 7, 'ஈ': 8, 'உ': 9, 'ஊ': 10, 'எ': 11, 'ஏ': 12, 'ஐ': 13, 'ஒ': 14, 'ஓ': 15, 'க': 16, 'ங': 17, 'ச': 18, 'ஜ': 19, 'ஞ': 20, 'ட': 21, 'ண': 22, 'த': 23, 'ந': 24, 'ன': 25, 'ப': 26, 'ம': 27, 'ய': 28, 'ர': 29, 'ற': 30, 'ல': 31, 'ள': 32, 'ழ': 33, 'வ': 34, 'ஷ': 35, 'ஸ': 36, 'ஹ': 37, 'ா': 38, 'ி': 39, 'ீ': 40, 'ு': 41, 'ூ': 42, 'ெ': 43, 'ே': 44, 'ை': 45, 'ொ': 46, 'ோ': 47, 'ௌ': 48, '்': 49}
+vocab size input:30
+vocab size target:50
+W&B config: {'batch_size': 64, 'beam_size': 3, 'cell_type': 'lstm', 'dec_layers': 2, 'dropout': 0.2, 'embed': 16, 'enc_layers': 2, 'hidden': 128, 'learning_rate': 0.0005}
+[1;34mwandb[0m: 
+[1;34mwandb[0m: 🚀 View run [33mvocal-sweep-37[0m at: [34mhttps://wandb.ai/sarath11-iit-madras/RNN_seq2seq/runs/vv2sucvi[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb/run-20260106_161528-vv2sucvi/logs[0m
+      native    roman  freq
+0     ஃபியட்     fiat     2
+1     ஃபியட்   phiyat     1
+2     ஃபியட்    piyat     1
+3  ஃபிரான்ஸ்  firaans     1
+4  ஃபிரான்ஸ்   france     2 68218 6827
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'a': 4, 'b': 5, 'c': 6, 'd': 7, 'e': 8, 'f': 9, 'g': 10, 'h': 11, 'i': 12, 'j': 13, 'k': 14, 'l': 15, 'm': 16, 'n': 17, 'o': 18, 'p': 19, 'q': 20, 'r': 21, 's': 22, 't': 23, 'u': 24, 'v': 25, 'w': 26, 'x': 27, 'y': 28, 'z': 29}
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'ஃ': 4, 'அ': 5, 'ஆ': 6, 'இ': 7, 'ஈ': 8, 'உ': 9, 'ஊ': 10, 'எ': 11, 'ஏ': 12, 'ஐ': 13, 'ஒ': 14, 'ஓ': 15, 'க': 16, 'ங': 17, 'ச': 18, 'ஜ': 19, 'ஞ': 20, 'ட': 21, 'ண': 22, 'த': 23, 'ந': 24, 'ன': 25, 'ப': 26, 'ம': 27, 'ய': 28, 'ர': 29, 'ற': 30, 'ல': 31, 'ள': 32, 'ழ': 33, 'வ': 34, 'ஷ': 35, 'ஸ': 36, 'ஹ': 37, 'ா': 38, 'ி': 39, 'ீ': 40, 'ு': 41, 'ூ': 42, 'ெ': 43, 'ே': 44, 'ை': 45, 'ொ': 46, 'ோ': 47, 'ௌ': 48, '்': 49}
+vocab size input:30
+vocab size target:50
+W&B config: {'batch_size': 64, 'beam_size': 5, 'cell_type': 'lstm', 'dec_layers': 3, 'dropout': 0.3, 'embed': 256, 'enc_layers': 1, 'hidden': 64, 'learning_rate': 0.0001}
+[1;34mwandb[0m: 
+[1;34mwandb[0m: 🚀 View run [33mdeft-sweep-38[0m at: [34mhttps://wandb.ai/sarath11-iit-madras/RNN_seq2seq/runs/9l6tjtir[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb/run-20260106_161622-9l6tjtir/logs[0m
+      native    roman  freq
+0     ஃபியட்     fiat     2
+1     ஃபியட்   phiyat     1
+2     ஃபியட்    piyat     1
+3  ஃபிரான்ஸ்  firaans     1
+4  ஃபிரான்ஸ்   france     2 68218 6827
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'a': 4, 'b': 5, 'c': 6, 'd': 7, 'e': 8, 'f': 9, 'g': 10, 'h': 11, 'i': 12, 'j': 13, 'k': 14, 'l': 15, 'm': 16, 'n': 17, 'o': 18, 'p': 19, 'q': 20, 'r': 21, 's': 22, 't': 23, 'u': 24, 'v': 25, 'w': 26, 'x': 27, 'y': 28, 'z': 29}
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'ஃ': 4, 'அ': 5, 'ஆ': 6, 'இ': 7, 'ஈ': 8, 'உ': 9, 'ஊ': 10, 'எ': 11, 'ஏ': 12, 'ஐ': 13, 'ஒ': 14, 'ஓ': 15, 'க': 16, 'ங': 17, 'ச': 18, 'ஜ': 19, 'ஞ': 20, 'ட': 21, 'ண': 22, 'த': 23, 'ந': 24, 'ன': 25, 'ப': 26, 'ம': 27, 'ய': 28, 'ர': 29, 'ற': 30, 'ல': 31, 'ள': 32, 'ழ': 33, 'வ': 34, 'ஷ': 35, 'ஸ': 36, 'ஹ': 37, 'ா': 38, 'ி': 39, 'ீ': 40, 'ு': 41, 'ூ': 42, 'ெ': 43, 'ே': 44, 'ை': 45, 'ொ': 46, 'ோ': 47, 'ௌ': 48, '்': 49}
+vocab size input:30
+vocab size target:50
+W&B config: {'batch_size': 32, 'beam_size': 1, 'cell_type': 'lstm', 'dec_layers': 2, 'dropout': 0.2, 'embed': 128, 'enc_layers': 1, 'hidden': 256, 'learning_rate': 0.0001}
+Epoch 01 | train 2.1042 | val 1.4709 | acc 0.599
+➤ Validation improved from inf → 1.4709. Saving checkpoint.
+Epoch 02 | train 1.2221 | val 0.9110 | acc 0.737
+➤ Validation improved from 1.4709 → 0.9110. Saving checkpoint.
+Epoch 03 | train 0.8434 | val 0.6857 | acc 0.801
+➤ Validation improved from 0.9110 → 0.6857. Saving checkpoint.
+Epoch 04 | train 0.6580 | val 0.5760 | acc 0.838
+➤ Validation improved from 0.6857 → 0.5760. Saving checkpoint.
+Epoch 05 | train 0.5516 | val 0.5118 | acc 0.859
+➤ Validation improved from 0.5760 → 0.5118. Saving checkpoint.
+Epoch 06 | train 0.4782 | val 0.4580 | acc 0.875
+➤ Validation improved from 0.5118 → 0.4580. Saving checkpoint.
+Epoch 07 | train 0.4235 | val 0.4338 | acc 0.883
+➤ Validation improved from 0.4580 → 0.4338. Saving checkpoint.
+Epoch 08 | train 0.3820 | val 0.4085 | acc 0.890
+➤ Validation improved from 0.4338 → 0.4085. Saving checkpoint.
+Epoch 09 | train 0.3486 | val 0.3834 | acc 0.896
+➤ Validation improved from 0.4085 → 0.3834. Saving checkpoint.
+Epoch 10 | train 0.3208 | val 0.3726 | acc 0.900
+➤ Validation improved from 0.3834 → 0.3726. Saving checkpoint.
+Epoch 11 | train 0.2974 | val 0.3608 | acc 0.902
+➤ Validation improved from 0.3726 → 0.3608. Saving checkpoint.
+Epoch 12 | train 0.2766 | val 0.3549 | acc 0.903
+➤ Validation improved from 0.3608 → 0.3549. Saving checkpoint.
+Epoch 13 | train 0.2580 | val 0.3451 | acc 0.906
+➤ Validation improved from 0.3549 → 0.3451. Saving checkpoint.
+Epoch 14 | train 0.2440 | val 0.3442 | acc 0.907
+➤ Validation improved from 0.3451 → 0.3442. Saving checkpoint.
+Epoch 15 | train 0.2292 | val 0.3396 | acc 0.909
+➤ Validation improved from 0.3442 → 0.3396. Saving checkpoint.
+Epoch 16 | train 0.2163 | val 0.3367 | acc 0.911
+➤ Validation improved from 0.3396 → 0.3367. Saving checkpoint.
+Epoch 17 | train 0.2052 | val 0.3336 | acc 0.911
+➤ Validation improved from 0.3367 → 0.3336. Saving checkpoint.
+Epoch 18 | train 0.1950 | val 0.3305 | acc 0.912
+➤ Validation improved from 0.3336 → 0.3305. Saving checkpoint.
+Epoch 19 | train 0.1855 | val 0.3293 | acc 0.912
+➤ Validation improved from 0.3305 → 0.3293. Saving checkpoint.
+Epoch 20 | train 0.1760 | val 0.3368 | acc 0.910
+➤ No improvement for 1 epoch(s).
+Epoch 21 | train 0.1684 | val 0.3312 | acc 0.913
+➤ No improvement for 2 epoch(s).
+Epoch 22 | train 0.1603 | val 0.3328 | acc 0.911
+➤ No improvement for 3 epoch(s).
+Epoch 23 | train 0.1543 | val 0.3340 | acc 0.914
+➤ No improvement for 4 epoch(s).
+Epoch 24 | train 0.1470 | val 0.3330 | acc 0.913
+➤ No improvement for 5 epoch(s).
+
+EARLY STOPPING TRIGGERED!
+
+Training complete. Best model saved to: best_model.pt
+      native    roman  freq
+0     ஃபியட்     fiat     2
+1     ஃபியட்   phiyat     1
+2     ஃபியட்    piyat     1
+3  ஃபிரான்ஸ்  firaans     1
+4  ஃபிரான்ஸ்   france     2 68218 6827
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'a': 4, 'b': 5, 'c': 6, 'd': 7, 'e': 8, 'f': 9, 'g': 10, 'h': 11, 'i': 12, 'j': 13, 'k': 14, 'l': 15, 'm': 16, 'n': 17, 'o': 18, 'p': 19, 'q': 20, 'r': 21, 's': 22, 't': 23, 'u': 24, 'v': 25, 'w': 26, 'x': 27, 'y': 28, 'z': 29}
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'ஃ': 4, 'அ': 5, 'ஆ': 6, 'இ': 7, 'ஈ': 8, 'உ': 9, 'ஊ': 10, 'எ': 11, 'ஏ': 12, 'ஐ': 13, 'ஒ': 14, 'ஓ': 15, 'க': 16, 'ங': 17, 'ச': 18, 'ஜ': 19, 'ஞ': 20, 'ட': 21, 'ண': 22, 'த': 23, 'ந': 24, 'ன': 25, 'ப': 26, 'ம': 27, 'ய': 28, 'ர': 29, 'ற': 30, 'ல': 31, 'ள': 32, 'ழ': 33, 'வ': 34, 'ஷ': 35, 'ஸ': 36, 'ஹ': 37, 'ா': 38, 'ி': 39, 'ீ': 40, 'ு': 41, 'ூ': 42, 'ெ': 43, 'ே': 44, 'ை': 45, 'ொ': 46, 'ோ': 47, 'ௌ': 48, '்': 49}
+vocab size input:30
+vocab size target:50
+W&B config: {'batch_size': 64, 'beam_size': 3, 'cell_type': 'rnn', 'dec_layers': 1, 'dropout': 0.3, 'embed': 128, 'enc_layers': 1, 'hidden': 64, 'learning_rate': 0.0001}
+[1;34mwandb[0m: 
+[1;34mwandb[0m: 🚀 View run [33mgrateful-sweep-40[0m at: [34mhttps://wandb.ai/sarath11-iit-madras/RNN_seq2seq/runs/2o2xreuu[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb/run-20260106_164706-2o2xreuu/logs[0m
+      native    roman  freq
+0     ஃபியட்     fiat     2
+1     ஃபியட்   phiyat     1
+2     ஃபியட்    piyat     1
+3  ஃபிரான்ஸ்  firaans     1
+4  ஃபிரான்ஸ்   france     2 68218 6827
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'a': 4, 'b': 5, 'c': 6, 'd': 7, 'e': 8, 'f': 9, 'g': 10, 'h': 11, 'i': 12, 'j': 13, 'k': 14, 'l': 15, 'm': 16, 'n': 17, 'o': 18, 'p': 19, 'q': 20, 'r': 21, 's': 22, 't': 23, 'u': 24, 'v': 25, 'w': 26, 'x': 27, 'y': 28, 'z': 29}
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'ஃ': 4, 'அ': 5, 'ஆ': 6, 'இ': 7, 'ஈ': 8, 'உ': 9, 'ஊ': 10, 'எ': 11, 'ஏ': 12, 'ஐ': 13, 'ஒ': 14, 'ஓ': 15, 'க': 16, 'ங': 17, 'ச': 18, 'ஜ': 19, 'ஞ': 20, 'ட': 21, 'ண': 22, 'த': 23, 'ந': 24, 'ன': 25, 'ப': 26, 'ம': 27, 'ய': 28, 'ர': 29, 'ற': 30, 'ல': 31, 'ள': 32, 'ழ': 33, 'வ': 34, 'ஷ': 35, 'ஸ': 36, 'ஹ': 37, 'ா': 38, 'ி': 39, 'ீ': 40, 'ு': 41, 'ூ': 42, 'ெ': 43, 'ே': 44, 'ை': 45, 'ொ': 46, 'ோ': 47, 'ௌ': 48, '்': 49}
+vocab size input:30
+vocab size target:50
+W&B config: {'batch_size': 64, 'beam_size': 5, 'cell_type': 'gru', 'dec_layers': 3, 'dropout': 0.3, 'embed': 256, 'enc_layers': 2, 'hidden': 64, 'learning_rate': 0.001}
+[1;34mwandb[0m: 
+[1;34mwandb[0m: 🚀 View run [33mcrisp-sweep-41[0m at: [34mhttps://wandb.ai/sarath11-iit-madras/RNN_seq2seq/runs/azh3pu6q[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb/run-20260106_164754-azh3pu6q/logs[0m
+      native    roman  freq
+0     ஃபியட்     fiat     2
+1     ஃபியட்   phiyat     1
+2     ஃபியட்    piyat     1
+3  ஃபிரான்ஸ்  firaans     1
+4  ஃபிரான்ஸ்   france     2 68218 6827
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'a': 4, 'b': 5, 'c': 6, 'd': 7, 'e': 8, 'f': 9, 'g': 10, 'h': 11, 'i': 12, 'j': 13, 'k': 14, 'l': 15, 'm': 16, 'n': 17, 'o': 18, 'p': 19, 'q': 20, 'r': 21, 's': 22, 't': 23, 'u': 24, 'v': 25, 'w': 26, 'x': 27, 'y': 28, 'z': 29}
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'ஃ': 4, 'அ': 5, 'ஆ': 6, 'இ': 7, 'ஈ': 8, 'உ': 9, 'ஊ': 10, 'எ': 11, 'ஏ': 12, 'ஐ': 13, 'ஒ': 14, 'ஓ': 15, 'க': 16, 'ங': 17, 'ச': 18, 'ஜ': 19, 'ஞ': 20, 'ட': 21, 'ண': 22, 'த': 23, 'ந': 24, 'ன': 25, 'ப': 26, 'ம': 27, 'ய': 28, 'ர': 29, 'ற': 30, 'ல': 31, 'ள': 32, 'ழ': 33, 'வ': 34, 'ஷ': 35, 'ஸ': 36, 'ஹ': 37, 'ா': 38, 'ி': 39, 'ீ': 40, 'ு': 41, 'ூ': 42, 'ெ': 43, 'ே': 44, 'ை': 45, 'ொ': 46, 'ோ': 47, 'ௌ': 48, '்': 49}
+vocab size input:30
+vocab size target:50
+W&B config: {'batch_size': 32, 'beam_size': 3, 'cell_type': 'gru', 'dec_layers': 1, 'dropout': 0.3, 'embed': 64, 'enc_layers': 1, 'hidden': 32, 'learning_rate': 0.001}
+[1;34mwandb[0m: 
+[1;34mwandb[0m: 🚀 View run [33mvital-sweep-42[0m at: [34mhttps://wandb.ai/sarath11-iit-madras/RNN_seq2seq/runs/f7cx65ik[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb/run-20260106_164847-f7cx65ik/logs[0m
+      native    roman  freq
+0     ஃபியட்     fiat     2
+1     ஃபியட்   phiyat     1
+2     ஃபியட்    piyat     1
+3  ஃபிரான்ஸ்  firaans     1
+4  ஃபிரான்ஸ்   france     2 68218 6827
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'a': 4, 'b': 5, 'c': 6, 'd': 7, 'e': 8, 'f': 9, 'g': 10, 'h': 11, 'i': 12, 'j': 13, 'k': 14, 'l': 15, 'm': 16, 'n': 17, 'o': 18, 'p': 19, 'q': 20, 'r': 21, 's': 22, 't': 23, 'u': 24, 'v': 25, 'w': 26, 'x': 27, 'y': 28, 'z': 29}
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'ஃ': 4, 'அ': 5, 'ஆ': 6, 'இ': 7, 'ஈ': 8, 'உ': 9, 'ஊ': 10, 'எ': 11, 'ஏ': 12, 'ஐ': 13, 'ஒ': 14, 'ஓ': 15, 'க': 16, 'ங': 17, 'ச': 18, 'ஜ': 19, 'ஞ': 20, 'ட': 21, 'ண': 22, 'த': 23, 'ந': 24, 'ன': 25, 'ப': 26, 'ம': 27, 'ய': 28, 'ர': 29, 'ற': 30, 'ல': 31, 'ள': 32, 'ழ': 33, 'வ': 34, 'ஷ': 35, 'ஸ': 36, 'ஹ': 37, 'ா': 38, 'ி': 39, 'ீ': 40, 'ு': 41, 'ூ': 42, 'ெ': 43, 'ே': 44, 'ை': 45, 'ொ': 46, 'ோ': 47, 'ௌ': 48, '்': 49}
+vocab size input:30
+vocab size target:50
+W&B config: {'batch_size': 64, 'beam_size': 3, 'cell_type': 'rnn', 'dec_layers': 1, 'dropout': 0.3, 'embed': 32, 'enc_layers': 2, 'hidden': 256, 'learning_rate': 0.001}
+[1;34mwandb[0m: 
+[1;34mwandb[0m: 🚀 View run [33mfresh-sweep-43[0m at: [34mhttps://wandb.ai/sarath11-iit-madras/RNN_seq2seq/runs/sfqf1y0d[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb/run-20260106_165002-sfqf1y0d/logs[0m
+      native    roman  freq
+0     ஃபியட்     fiat     2
+1     ஃபியட்   phiyat     1
+2     ஃபியட்    piyat     1
+3  ஃபிரான்ஸ்  firaans     1
+4  ஃபிரான்ஸ்   france     2 68218 6827
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'a': 4, 'b': 5, 'c': 6, 'd': 7, 'e': 8, 'f': 9, 'g': 10, 'h': 11, 'i': 12, 'j': 13, 'k': 14, 'l': 15, 'm': 16, 'n': 17, 'o': 18, 'p': 19, 'q': 20, 'r': 21, 's': 22, 't': 23, 'u': 24, 'v': 25, 'w': 26, 'x': 27, 'y': 28, 'z': 29}
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'ஃ': 4, 'அ': 5, 'ஆ': 6, 'இ': 7, 'ஈ': 8, 'உ': 9, 'ஊ': 10, 'எ': 11, 'ஏ': 12, 'ஐ': 13, 'ஒ': 14, 'ஓ': 15, 'க': 16, 'ங': 17, 'ச': 18, 'ஜ': 19, 'ஞ': 20, 'ட': 21, 'ண': 22, 'த': 23, 'ந': 24, 'ன': 25, 'ப': 26, 'ம': 27, 'ய': 28, 'ர': 29, 'ற': 30, 'ல': 31, 'ள': 32, 'ழ': 33, 'வ': 34, 'ஷ': 35, 'ஸ': 36, 'ஹ': 37, 'ா': 38, 'ி': 39, 'ீ': 40, 'ு': 41, 'ூ': 42, 'ெ': 43, 'ே': 44, 'ை': 45, 'ொ': 46, 'ோ': 47, 'ௌ': 48, '்': 49}
+vocab size input:30
+vocab size target:50
+W&B config: {'batch_size': 32, 'beam_size': 5, 'cell_type': 'rnn', 'dec_layers': 2, 'dropout': 0.2, 'embed': 16, 'enc_layers': 1, 'hidden': 256, 'learning_rate': 0.0001}
+[1;34mwandb[0m: 
+[1;34mwandb[0m: 🚀 View run [33mproud-sweep-44[0m at: [34mhttps://wandb.ai/sarath11-iit-madras/RNN_seq2seq/runs/j0y2z4gz[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb/run-20260106_165055-j0y2z4gz/logs[0m
+      native    roman  freq
+0     ஃபியட்     fiat     2
+1     ஃபியட்   phiyat     1
+2     ஃபியட்    piyat     1
+3  ஃபிரான்ஸ்  firaans     1
+4  ஃபிரான்ஸ்   france     2 68218 6827
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'a': 4, 'b': 5, 'c': 6, 'd': 7, 'e': 8, 'f': 9, 'g': 10, 'h': 11, 'i': 12, 'j': 13, 'k': 14, 'l': 15, 'm': 16, 'n': 17, 'o': 18, 'p': 19, 'q': 20, 'r': 21, 's': 22, 't': 23, 'u': 24, 'v': 25, 'w': 26, 'x': 27, 'y': 28, 'z': 29}
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'ஃ': 4, 'அ': 5, 'ஆ': 6, 'இ': 7, 'ஈ': 8, 'உ': 9, 'ஊ': 10, 'எ': 11, 'ஏ': 12, 'ஐ': 13, 'ஒ': 14, 'ஓ': 15, 'க': 16, 'ங': 17, 'ச': 18, 'ஜ': 19, 'ஞ': 20, 'ட': 21, 'ண': 22, 'த': 23, 'ந': 24, 'ன': 25, 'ப': 26, 'ம': 27, 'ய': 28, 'ர': 29, 'ற': 30, 'ல': 31, 'ள': 32, 'ழ': 33, 'வ': 34, 'ஷ': 35, 'ஸ': 36, 'ஹ': 37, 'ா': 38, 'ி': 39, 'ீ': 40, 'ு': 41, 'ூ': 42, 'ெ': 43, 'ே': 44, 'ை': 45, 'ொ': 46, 'ோ': 47, 'ௌ': 48, '்': 49}
+vocab size input:30
+vocab size target:50
+W&B config: {'batch_size': 64, 'beam_size': 3, 'cell_type': 'lstm', 'dec_layers': 1, 'dropout': 0.3, 'embed': 256, 'enc_layers': 2, 'hidden': 64, 'learning_rate': 0.001}
+[1;34mwandb[0m: 
+[1;34mwandb[0m: 🚀 View run [33mbalmy-sweep-45[0m at: [34mhttps://wandb.ai/sarath11-iit-madras/RNN_seq2seq/runs/unkd5fe6[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb/run-20260106_165210-unkd5fe6/logs[0m
+      native    roman  freq
+0     ஃபியட்     fiat     2
+1     ஃபியட்   phiyat     1
+2     ஃபியட்    piyat     1
+3  ஃபிரான்ஸ்  firaans     1
+4  ஃபிரான்ஸ்   france     2 68218 6827
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'a': 4, 'b': 5, 'c': 6, 'd': 7, 'e': 8, 'f': 9, 'g': 10, 'h': 11, 'i': 12, 'j': 13, 'k': 14, 'l': 15, 'm': 16, 'n': 17, 'o': 18, 'p': 19, 'q': 20, 'r': 21, 's': 22, 't': 23, 'u': 24, 'v': 25, 'w': 26, 'x': 27, 'y': 28, 'z': 29}
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'ஃ': 4, 'அ': 5, 'ஆ': 6, 'இ': 7, 'ஈ': 8, 'உ': 9, 'ஊ': 10, 'எ': 11, 'ஏ': 12, 'ஐ': 13, 'ஒ': 14, 'ஓ': 15, 'க': 16, 'ங': 17, 'ச': 18, 'ஜ': 19, 'ஞ': 20, 'ட': 21, 'ண': 22, 'த': 23, 'ந': 24, 'ன': 25, 'ப': 26, 'ம': 27, 'ய': 28, 'ர': 29, 'ற': 30, 'ல': 31, 'ள': 32, 'ழ': 33, 'வ': 34, 'ஷ': 35, 'ஸ': 36, 'ஹ': 37, 'ா': 38, 'ி': 39, 'ீ': 40, 'ு': 41, 'ூ': 42, 'ெ': 43, 'ே': 44, 'ை': 45, 'ொ': 46, 'ோ': 47, 'ௌ': 48, '்': 49}
+vocab size input:30
+vocab size target:50
+W&B config: {'batch_size': 64, 'beam_size': 5, 'cell_type': 'lstm', 'dec_layers': 2, 'dropout': 0.2, 'embed': 32, 'enc_layers': 2, 'hidden': 256, 'learning_rate': 0.001}
+[1;34mwandb[0m: 
+[1;34mwandb[0m: 🚀 View run [33mamber-sweep-46[0m at: [34mhttps://wandb.ai/sarath11-iit-madras/RNN_seq2seq/runs/4kauk1u4[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb/run-20260106_165258-4kauk1u4/logs[0m
+      native    roman  freq
+0     ஃபியட்     fiat     2
+1     ஃபியட்   phiyat     1
+2     ஃபியட்    piyat     1
+3  ஃபிரான்ஸ்  firaans     1
+4  ஃபிரான்ஸ்   france     2 68218 6827
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'a': 4, 'b': 5, 'c': 6, 'd': 7, 'e': 8, 'f': 9, 'g': 10, 'h': 11, 'i': 12, 'j': 13, 'k': 14, 'l': 15, 'm': 16, 'n': 17, 'o': 18, 'p': 19, 'q': 20, 'r': 21, 's': 22, 't': 23, 'u': 24, 'v': 25, 'w': 26, 'x': 27, 'y': 28, 'z': 29}
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'ஃ': 4, 'அ': 5, 'ஆ': 6, 'இ': 7, 'ஈ': 8, 'உ': 9, 'ஊ': 10, 'எ': 11, 'ஏ': 12, 'ஐ': 13, 'ஒ': 14, 'ஓ': 15, 'க': 16, 'ங': 17, 'ச': 18, 'ஜ': 19, 'ஞ': 20, 'ட': 21, 'ண': 22, 'த': 23, 'ந': 24, 'ன': 25, 'ப': 26, 'ம': 27, 'ய': 28, 'ர': 29, 'ற': 30, 'ல': 31, 'ள': 32, 'ழ': 33, 'வ': 34, 'ஷ': 35, 'ஸ': 36, 'ஹ': 37, 'ா': 38, 'ி': 39, 'ீ': 40, 'ு': 41, 'ூ': 42, 'ெ': 43, 'ே': 44, 'ை': 45, 'ொ': 46, 'ோ': 47, 'ௌ': 48, '்': 49}
+vocab size input:30
+vocab size target:50
+W&B config: {'batch_size': 32, 'beam_size': 3, 'cell_type': 'gru', 'dec_layers': 3, 'dropout': 0.2, 'embed': 16, 'enc_layers': 2, 'hidden': 128, 'learning_rate': 0.0001}
+[1;34mwandb[0m: 
+[1;34mwandb[0m: 🚀 View run [33mrosy-sweep-48[0m at: [34mhttps://wandb.ai/sarath11-iit-madras/RNN_seq2seq/runs/uils3hru[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb/run-20260106_165712-uils3hru/logs[0m
+      native    roman  freq
+0     ஃபியட்     fiat     2
+1     ஃபியட்   phiyat     1
+2     ஃபியட்    piyat     1
+3  ஃபிரான்ஸ்  firaans     1
+4  ஃபிரான்ஸ்   france     2 68218 6827
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'a': 4, 'b': 5, 'c': 6, 'd': 7, 'e': 8, 'f': 9, 'g': 10, 'h': 11, 'i': 12, 'j': 13, 'k': 14, 'l': 15, 'm': 16, 'n': 17, 'o': 18, 'p': 19, 'q': 20, 'r': 21, 's': 22, 't': 23, 'u': 24, 'v': 25, 'w': 26, 'x': 27, 'y': 28, 'z': 29}
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'ஃ': 4, 'அ': 5, 'ஆ': 6, 'இ': 7, 'ஈ': 8, 'உ': 9, 'ஊ': 10, 'எ': 11, 'ஏ': 12, 'ஐ': 13, 'ஒ': 14, 'ஓ': 15, 'க': 16, 'ங': 17, 'ச': 18, 'ஜ': 19, 'ஞ': 20, 'ட': 21, 'ண': 22, 'த': 23, 'ந': 24, 'ன': 25, 'ப': 26, 'ம': 27, 'ய': 28, 'ர': 29, 'ற': 30, 'ல': 31, 'ள': 32, 'ழ': 33, 'வ': 34, 'ஷ': 35, 'ஸ': 36, 'ஹ': 37, 'ா': 38, 'ி': 39, 'ீ': 40, 'ு': 41, 'ூ': 42, 'ெ': 43, 'ே': 44, 'ை': 45, 'ொ': 46, 'ோ': 47, 'ௌ': 48, '்': 49}
+vocab size input:30
+vocab size target:50
+W&B config: {'batch_size': 64, 'beam_size': 3, 'cell_type': 'gru', 'dec_layers': 1, 'dropout': 0.2, 'embed': 32, 'enc_layers': 1, 'hidden': 64, 'learning_rate': 0.0005}
+[1;34mwandb[0m: 
+[1;34mwandb[0m: 🚀 View run [33mrural-sweep-49[0m at: [34mhttps://wandb.ai/sarath11-iit-madras/RNN_seq2seq/runs/pkdr7s8n[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb/run-20260106_165832-pkdr7s8n/logs[0m
+      native    roman  freq
+0     ஃபியட்     fiat     2
+1     ஃபியட்   phiyat     1
+2     ஃபியட்    piyat     1
+3  ஃபிரான்ஸ்  firaans     1
+4  ஃபிரான்ஸ்   france     2 68218 6827
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'a': 4, 'b': 5, 'c': 6, 'd': 7, 'e': 8, 'f': 9, 'g': 10, 'h': 11, 'i': 12, 'j': 13, 'k': 14, 'l': 15, 'm': 16, 'n': 17, 'o': 18, 'p': 19, 'q': 20, 'r': 21, 's': 22, 't': 23, 'u': 24, 'v': 25, 'w': 26, 'x': 27, 'y': 28, 'z': 29}
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'ஃ': 4, 'அ': 5, 'ஆ': 6, 'இ': 7, 'ஈ': 8, 'உ': 9, 'ஊ': 10, 'எ': 11, 'ஏ': 12, 'ஐ': 13, 'ஒ': 14, 'ஓ': 15, 'க': 16, 'ங': 17, 'ச': 18, 'ஜ': 19, 'ஞ': 20, 'ட': 21, 'ண': 22, 'த': 23, 'ந': 24, 'ன': 25, 'ப': 26, 'ம': 27, 'ய': 28, 'ர': 29, 'ற': 30, 'ல': 31, 'ள': 32, 'ழ': 33, 'வ': 34, 'ஷ': 35, 'ஸ': 36, 'ஹ': 37, 'ா': 38, 'ி': 39, 'ீ': 40, 'ு': 41, 'ூ': 42, 'ெ': 43, 'ே': 44, 'ை': 45, 'ொ': 46, 'ோ': 47, 'ௌ': 48, '்': 49}
+vocab size input:30
+vocab size target:50
+W&B config: {'batch_size': 32, 'beam_size': 1, 'cell_type': 'rnn', 'dec_layers': 2, 'dropout': 0.2, 'embed': 256, 'enc_layers': 1, 'hidden': 128, 'learning_rate': 0.001}
+Epoch 01 | train 2.0089 | val 1.8982 | acc 0.428
+➤ Validation improved from inf → 1.8982. Saving checkpoint.
+Epoch 02 | train 1.8453 | val 1.8618 | acc 0.442
+➤ Validation improved from 1.8982 → 1.8618. Saving checkpoint.
+Epoch 03 | train 1.7877 | val 1.8207 | acc 0.449
+➤ Validation improved from 1.8618 → 1.8207. Saving checkpoint.
+      native    roman  freq
+0     ஃபியட்     fiat     2
+1     ஃபியட்   phiyat     1
+2     ஃபியட்    piyat     1
+3  ஃபிரான்ஸ்  firaans     1
+4  ஃபிரான்ஸ்   france     2 68218 6827
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'a': 4, 'b': 5, 'c': 6, 'd': 7, 'e': 8, 'f': 9, 'g': 10, 'h': 11, 'i': 12, 'j': 13, 'k': 14, 'l': 15, 'm': 16, 'n': 17, 'o': 18, 'p': 19, 'q': 20, 'r': 21, 's': 22, 't': 23, 'u': 24, 'v': 25, 'w': 26, 'x': 27, 'y': 28, 'z': 29}
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'ஃ': 4, 'அ': 5, 'ஆ': 6, 'இ': 7, 'ஈ': 8, 'உ': 9, 'ஊ': 10, 'எ': 11, 'ஏ': 12, 'ஐ': 13, 'ஒ': 14, 'ஓ': 15, 'க': 16, 'ங': 17, 'ச': 18, 'ஜ': 19, 'ஞ': 20, 'ட': 21, 'ண': 22, 'த': 23, 'ந': 24, 'ன': 25, 'ப': 26, 'ம': 27, 'ய': 28, 'ர': 29, 'ற': 30, 'ல': 31, 'ள': 32, 'ழ': 33, 'வ': 34, 'ஷ': 35, 'ஸ': 36, 'ஹ': 37, 'ா': 38, 'ி': 39, 'ீ': 40, 'ு': 41, 'ூ': 42, 'ெ': 43, 'ே': 44, 'ை': 45, 'ொ': 46, 'ோ': 47, 'ௌ': 48, '்': 49}
+vocab size input:30
+vocab size target:50
+W&B config: {'batch_size': 32, 'beam_size': 3, 'cell_type': 'lstm', 'dec_layers': 1, 'dropout': 0.2, 'embed': 64, 'enc_layers': 2, 'hidden': 256, 'learning_rate': 0.001}
+[1;34mwandb[0m: 
+[1;34mwandb[0m: 🚀 View run [33msolar-sweep-52[0m at: [34mhttps://wandb.ai/sarath11-iit-madras/RNN_seq2seq/runs/j1ahcat2[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb/run-20260106_171512-j1ahcat2/logs[0m
+      native    roman  freq
+0     ஃபியட்     fiat     2
+1     ஃபியட்   phiyat     1
+2     ஃபியட்    piyat     1
+3  ஃபிரான்ஸ்  firaans     1
+4  ஃபிரான்ஸ்   france     2 68218 6827
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'a': 4, 'b': 5, 'c': 6, 'd': 7, 'e': 8, 'f': 9, 'g': 10, 'h': 11, 'i': 12, 'j': 13, 'k': 14, 'l': 15, 'm': 16, 'n': 17, 'o': 18, 'p': 19, 'q': 20, 'r': 21, 's': 22, 't': 23, 'u': 24, 'v': 25, 'w': 26, 'x': 27, 'y': 28, 'z': 29}
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'ஃ': 4, 'அ': 5, 'ஆ': 6, 'இ': 7, 'ஈ': 8, 'உ': 9, 'ஊ': 10, 'எ': 11, 'ஏ': 12, 'ஐ': 13, 'ஒ': 14, 'ஓ': 15, 'க': 16, 'ங': 17, 'ச': 18, 'ஜ': 19, 'ஞ': 20, 'ட': 21, 'ண': 22, 'த': 23, 'ந': 24, 'ன': 25, 'ப': 26, 'ம': 27, 'ய': 28, 'ர': 29, 'ற': 30, 'ல': 31, 'ள': 32, 'ழ': 33, 'வ': 34, 'ஷ': 35, 'ஸ': 36, 'ஹ': 37, 'ா': 38, 'ி': 39, 'ீ': 40, 'ு': 41, 'ூ': 42, 'ெ': 43, 'ே': 44, 'ை': 45, 'ொ': 46, 'ோ': 47, 'ௌ': 48, '்': 49}
+vocab size input:30
+vocab size target:50
+W&B config: {'batch_size': 64, 'beam_size': 3, 'cell_type': 'gru', 'dec_layers': 1, 'dropout': 0.2, 'embed': 256, 'enc_layers': 1, 'hidden': 32, 'learning_rate': 0.001}
+[1;34mwandb[0m: 
+[1;34mwandb[0m: 🚀 View run [33mfine-sweep-53[0m at: [34mhttps://wandb.ai/sarath11-iit-madras/RNN_seq2seq/runs/06pxbm70[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb/run-20260106_171643-06pxbm70/logs[0m
+      native    roman  freq
+0     ஃபியட்     fiat     2
+1     ஃபியட்   phiyat     1
+2     ஃபியட்    piyat     1
+3  ஃபிரான்ஸ்  firaans     1
+4  ஃபிரான்ஸ்   france     2 68218 6827
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'a': 4, 'b': 5, 'c': 6, 'd': 7, 'e': 8, 'f': 9, 'g': 10, 'h': 11, 'i': 12, 'j': 13, 'k': 14, 'l': 15, 'm': 16, 'n': 17, 'o': 18, 'p': 19, 'q': 20, 'r': 21, 's': 22, 't': 23, 'u': 24, 'v': 25, 'w': 26, 'x': 27, 'y': 28, 'z': 29}
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'ஃ': 4, 'அ': 5, 'ஆ': 6, 'இ': 7, 'ஈ': 8, 'உ': 9, 'ஊ': 10, 'எ': 11, 'ஏ': 12, 'ஐ': 13, 'ஒ': 14, 'ஓ': 15, 'க': 16, 'ங': 17, 'ச': 18, 'ஜ': 19, 'ஞ': 20, 'ட': 21, 'ண': 22, 'த': 23, 'ந': 24, 'ன': 25, 'ப': 26, 'ம': 27, 'ய': 28, 'ர': 29, 'ற': 30, 'ல': 31, 'ள': 32, 'ழ': 33, 'வ': 34, 'ஷ': 35, 'ஸ': 36, 'ஹ': 37, 'ா': 38, 'ி': 39, 'ீ': 40, 'ு': 41, 'ூ': 42, 'ெ': 43, 'ே': 44, 'ை': 45, 'ொ': 46, 'ோ': 47, 'ௌ': 48, '்': 49}
+vocab size input:30
+vocab size target:50
+W&B config: {'batch_size': 64, 'beam_size': 5, 'cell_type': 'gru', 'dec_layers': 1, 'dropout': 0.2, 'embed': 128, 'enc_layers': 1, 'hidden': 128, 'learning_rate': 0.0005}
+[1;34mwandb[0m: 
+[1;34mwandb[0m: 🚀 View run [33msweet-sweep-54[0m at: [34mhttps://wandb.ai/sarath11-iit-madras/RNN_seq2seq/runs/oue2z9f4[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb/run-20260106_171731-oue2z9f4/logs[0m
+      native    roman  freq
+0     ஃபியட்     fiat     2
+1     ஃபியட்   phiyat     1
+2     ஃபியட்    piyat     1
+3  ஃபிரான்ஸ்  firaans     1
+4  ஃபிரான்ஸ்   france     2 68218 6827
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'a': 4, 'b': 5, 'c': 6, 'd': 7, 'e': 8, 'f': 9, 'g': 10, 'h': 11, 'i': 12, 'j': 13, 'k': 14, 'l': 15, 'm': 16, 'n': 17, 'o': 18, 'p': 19, 'q': 20, 'r': 21, 's': 22, 't': 23, 'u': 24, 'v': 25, 'w': 26, 'x': 27, 'y': 28, 'z': 29}
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'ஃ': 4, 'அ': 5, 'ஆ': 6, 'இ': 7, 'ஈ': 8, 'உ': 9, 'ஊ': 10, 'எ': 11, 'ஏ': 12, 'ஐ': 13, 'ஒ': 14, 'ஓ': 15, 'க': 16, 'ங': 17, 'ச': 18, 'ஜ': 19, 'ஞ': 20, 'ட': 21, 'ண': 22, 'த': 23, 'ந': 24, 'ன': 25, 'ப': 26, 'ம': 27, 'ய': 28, 'ர': 29, 'ற': 30, 'ல': 31, 'ள': 32, 'ழ': 33, 'வ': 34, 'ஷ': 35, 'ஸ': 36, 'ஹ': 37, 'ா': 38, 'ி': 39, 'ீ': 40, 'ு': 41, 'ூ': 42, 'ெ': 43, 'ே': 44, 'ை': 45, 'ொ': 46, 'ோ': 47, 'ௌ': 48, '்': 49}
+vocab size input:30
+vocab size target:50
+W&B config: {'batch_size': 64, 'beam_size': 5, 'cell_type': 'rnn', 'dec_layers': 2, 'dropout': 0.3, 'embed': 16, 'enc_layers': 2, 'hidden': 128, 'learning_rate': 0.001}
+[1;34mwandb[0m: 
+[1;34mwandb[0m: 🚀 View run [33mgrateful-sweep-55[0m at: [34mhttps://wandb.ai/sarath11-iit-madras/RNN_seq2seq/runs/iunl1nc0[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb/run-20260106_171819-iunl1nc0/logs[0m
+      native    roman  freq
+0     ஃபியட்     fiat     2
+1     ஃபியட்   phiyat     1
+2     ஃபியட்    piyat     1
+3  ஃபிரான்ஸ்  firaans     1
+4  ஃபிரான்ஸ்   france     2 68218 6827
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'a': 4, 'b': 5, 'c': 6, 'd': 7, 'e': 8, 'f': 9, 'g': 10, 'h': 11, 'i': 12, 'j': 13, 'k': 14, 'l': 15, 'm': 16, 'n': 17, 'o': 18, 'p': 19, 'q': 20, 'r': 21, 's': 22, 't': 23, 'u': 24, 'v': 25, 'w': 26, 'x': 27, 'y': 28, 'z': 29}
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'ஃ': 4, 'அ': 5, 'ஆ': 6, 'இ': 7, 'ஈ': 8, 'உ': 9, 'ஊ': 10, 'எ': 11, 'ஏ': 12, 'ஐ': 13, 'ஒ': 14, 'ஓ': 15, 'க': 16, 'ங': 17, 'ச': 18, 'ஜ': 19, 'ஞ': 20, 'ட': 21, 'ண': 22, 'த': 23, 'ந': 24, 'ன': 25, 'ப': 26, 'ம': 27, 'ய': 28, 'ர': 29, 'ற': 30, 'ல': 31, 'ள': 32, 'ழ': 33, 'வ': 34, 'ஷ': 35, 'ஸ': 36, 'ஹ': 37, 'ா': 38, 'ி': 39, 'ீ': 40, 'ு': 41, 'ூ': 42, 'ெ': 43, 'ே': 44, 'ை': 45, 'ொ': 46, 'ோ': 47, 'ௌ': 48, '்': 49}
+vocab size input:30
+vocab size target:50
+W&B config: {'batch_size': 64, 'beam_size': 5, 'cell_type': 'lstm', 'dec_layers': 3, 'dropout': 0.2, 'embed': 32, 'enc_layers': 3, 'hidden': 128, 'learning_rate': 0.0001}
+[1;34mwandb[0m: 
+[1;34mwandb[0m: 🚀 View run [33mcomfy-sweep-56[0m at: [34mhttps://wandb.ai/sarath11-iit-madras/RNN_seq2seq/runs/d7rnzk0s[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb/run-20260106_171907-d7rnzk0s/logs[0m
+      native    roman  freq
+0     ஃபியட்     fiat     2
+1     ஃபியட்   phiyat     1
+2     ஃபியட்    piyat     1
+3  ஃபிரான்ஸ்  firaans     1
+4  ஃபிரான்ஸ்   france     2 68218 6827
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'a': 4, 'b': 5, 'c': 6, 'd': 7, 'e': 8, 'f': 9, 'g': 10, 'h': 11, 'i': 12, 'j': 13, 'k': 14, 'l': 15, 'm': 16, 'n': 17, 'o': 18, 'p': 19, 'q': 20, 'r': 21, 's': 22, 't': 23, 'u': 24, 'v': 25, 'w': 26, 'x': 27, 'y': 28, 'z': 29}
+{'<pad>': 0, '<s>': 1, '</s>': 2, '<unk>': 3, 'ஃ': 4, 'அ': 5, 'ஆ': 6, 'இ': 7, 'ஈ': 8, 'உ': 9, 'ஊ': 10, 'எ': 11, 'ஏ': 12, 'ஐ': 13, 'ஒ': 14, 'ஓ': 15, 'க': 16, 'ங': 17, 'ச': 18, 'ஜ': 19, 'ஞ': 20, 'ட': 21, 'ண': 22, 'த': 23, 'ந': 24, 'ன': 25, 'ப': 26, 'ம': 27, 'ய': 28, 'ர': 29, 'ற': 30, 'ல': 31, 'ள': 32, 'ழ': 33, 'வ': 34, 'ஷ': 35, 'ஸ': 36, 'ஹ': 37, 'ா': 38, 'ி': 39, 'ீ': 40, 'ு': 41, 'ூ': 42, 'ெ': 43, 'ே': 44, 'ை': 45, 'ொ': 46, 'ோ': 47, 'ௌ': 48, '்': 49}
+vocab size input:30
+vocab size target:50
+W&B config: {'batch_size': 32, 'beam_size': 3, 'cell_type': 'gru', 'dec_layers': 2, 'dropout': 0.3, 'embed': 16, 'enc_layers': 1, 'hidden': 256, 'learning_rate': 0.0001}
+[1;34mwandb[0m: 
+[1;34mwandb[0m: 🚀 View run [33mexpert-sweep-57[0m at: [34mhttps://wandb.ai/sarath11-iit-madras/RNN_seq2seq/runs/m3ux1j7i[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb/run-20260106_172000-m3ux1j7i/logs[0m

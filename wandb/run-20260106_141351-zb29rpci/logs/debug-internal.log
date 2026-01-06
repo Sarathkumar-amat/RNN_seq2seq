@@ -1,0 +1,12 @@
+{"time":"2026-01-06T14:13:51.927088132+05:30","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2026-01-06T14:13:52.428771924+05:30","level":"INFO","msg":"stream: created new stream","id":"zb29rpci"}
+{"time":"2026-01-06T14:13:52.428831844+05:30","level":"INFO","msg":"stream: started","id":"zb29rpci"}
+{"time":"2026-01-06T14:13:52.428864024+05:30","level":"INFO","msg":"sender: started","stream_id":"zb29rpci"}
+{"time":"2026-01-06T14:13:52.428887905+05:30","level":"INFO","msg":"handler: started","stream_id":"zb29rpci"}
+{"time":"2026-01-06T14:13:52.428865914+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"zb29rpci"}
+{"time":"2026-01-06T14:13:53.381657978+05:30","level":"INFO","msg":"stream: closing","id":"zb29rpci"}
+{"time":"2026-01-06T14:13:55.071811224+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-01-06T14:13:55.399164503+05:30","level":"INFO","msg":"handler: closed","stream_id":"zb29rpci"}
+{"time":"2026-01-06T14:13:55.399209413+05:30","level":"INFO","msg":"sender: closed","stream_id":"zb29rpci"}
+{"time":"2026-01-06T14:13:55.399214653+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"zb29rpci"}
+{"time":"2026-01-06T14:13:55.399339483+05:30","level":"INFO","msg":"stream: closed","id":"zb29rpci"}

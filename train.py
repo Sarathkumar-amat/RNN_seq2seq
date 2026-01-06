@@ -3,7 +3,7 @@ from torch.utils.data import Dataset, DataLoader
 
 # from encode_collate import train_loader,dev_loader,src_itos,tgt_itos,src_stoi,tgt_stoi,PAD
 
-from encode_collate import train_data, dev_data,src_itos,tgt_itos,src_stoi,tgt_stoi,collate_fn,PAD
+from encode_collate import train_data, dev_data,src_itos,tgt_itos,src_stoi,tgt_stoi,collate_fn,PAD,SOS,EOS
 
 from seq2seq_transliterate_wrapper import Encoder,Decoder,translit_Seq2Seq
 from evaluate import evaluate,char_accuracy
@@ -53,11 +53,11 @@ config = wandb.config
 #         "model": "RNN-Seq2Seq"
 #     }
 # )
-
-
-enc = Encoder(config.cell_type,SRC_V, config.embed, config.hidden, num_layers=config.enc_layers, pad_idx=src_stoi[PAD])
-dec = Decoder(config.cell_type,TGT_V, config.embed, config.hidden, num_layers=config.dec_layers, pad_idx=tgt_stoi[PAD])
-model = translit_Seq2Seq(enc, dec, cell_type=config.cell_type).to("cuda" if torch.cuda.is_available() else "cpu")
+print("W&B config:", dict(config))
+CELL_TYPE = config.cell_type
+enc = Encoder(CELL_TYPE,SRC_V, config.embed, config.hidden, num_layers=config.enc_layers, pad_idx=src_stoi[PAD],dropout=config.dropout)
+dec = Decoder(CELL_TYPE,TGT_V, config.embed, config.hidden, num_layers=config.dec_layers, pad_idx=tgt_stoi[PAD],dropout=config.dropout)
+model = translit_Seq2Seq(enc, dec, cell_type=CELL_TYPE).to("cuda" if torch.cuda.is_available() else "cpu")
 
 
 device = next(model.parameters()).device
@@ -68,8 +68,8 @@ train_loader = DataLoader(train_data,config.batch_size,shuffle=True,collate_fn=c
 dev_loader = DataLoader(dev_data,config.batch_size,shuffle=False,collate_fn=collate_fn)
 
 for epoch in range(1, EPOCHS+1):
-    train_loss = train_one_epoch(model, train_loader, device,optimizer,criterion,tgt_pad_idx,clip=1.0, tfr=1.0)  # start with 1.0
-    val_loss   = evaluate(model, dev_loader,device,criterion,tgt_pad_idx=tgt_pad_idx)
+    train_loss = train_one_epoch(model,train_loader,device,optimizer,criterion,tgt_pad_idx,clip=1.0, tfr=1.0)  # start with 1.0
+    val_loss   = evaluate(model, dev_loader,device,criterion,tgt_pad_idx=tgt_pad_idx,beam_size=config.beam_size,sos_idx=SOS,eos_idx=EOS)
     val_acc    = char_accuracy(model, dev_loader,device,criterion,tgt_pad_idx=tgt_pad_idx)
 
 

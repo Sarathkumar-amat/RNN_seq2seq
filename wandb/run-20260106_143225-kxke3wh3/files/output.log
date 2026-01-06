@@ -1,0 +1,61 @@
+W&B config: {'batch_size': 64, 'beam_size': 1, 'cell_type': 'gru', 'dec_layers': 1, 'dropout': 0.2, 'embed': 128, 'enc_layers': 3, 'hidden': 128, 'learning_rate': 0.0001}
+Epoch 01 | train 2.5305 | val 2.0540 | acc 0.427
+➤ Validation improved from inf → 2.0540. Saving checkpoint.
+Epoch 02 | train 1.9130 | val 1.7740 | acc 0.499
+➤ Validation improved from 2.0540 → 1.7740. Saving checkpoint.
+Epoch 03 | train 1.7253 | val 1.6381 | acc 0.533
+➤ Validation improved from 1.7740 → 1.6381. Saving checkpoint.
+Epoch 04 | train 1.6035 | val 1.5227 | acc 0.563
+➤ Validation improved from 1.6381 → 1.5227. Saving checkpoint.
+Epoch 05 | train 1.4838 | val 1.3781 | acc 0.599
+➤ Validation improved from 1.5227 → 1.3781. Saving checkpoint.
+Epoch 06 | train 1.3519 | val 1.2293 | acc 0.637
+➤ Validation improved from 1.3781 → 1.2293. Saving checkpoint.
+Epoch 07 | train 1.2285 | val 1.1006 | acc 0.674
+➤ Validation improved from 1.2293 → 1.1006. Saving checkpoint.
+Epoch 08 | train 1.1136 | val 0.9924 | acc 0.706
+➤ Validation improved from 1.1006 → 0.9924. Saving checkpoint.
+Epoch 09 | train 1.0199 | val 0.9075 | acc 0.732
+➤ Validation improved from 0.9924 → 0.9075. Saving checkpoint.
+Epoch 10 | train 0.9425 | val 0.8429 | acc 0.751
+➤ Validation improved from 0.9075 → 0.8429. Saving checkpoint.
+Epoch 11 | train 0.8799 | val 0.7874 | acc 0.771
+➤ Validation improved from 0.8429 → 0.7874. Saving checkpoint.
+Epoch 12 | train 0.8260 | val 0.7367 | acc 0.788
+➤ Validation improved from 0.7874 → 0.7367. Saving checkpoint.
+Epoch 13 | train 0.7814 | val 0.6967 | acc 0.799
+➤ Validation improved from 0.7367 → 0.6967. Saving checkpoint.
+Epoch 14 | train 0.7417 | val 0.6609 | acc 0.812
+➤ Validation improved from 0.6967 → 0.6609. Saving checkpoint.
+Epoch 15 | train 0.7087 | val 0.6393 | acc 0.820
+➤ Validation improved from 0.6609 → 0.6393. Saving checkpoint.
+Epoch 16 | train 0.6783 | val 0.6110 | acc 0.828
+➤ Validation improved from 0.6393 → 0.6110. Saving checkpoint.
+Epoch 17 | train 0.6523 | val 0.5918 | acc 0.834
+➤ Validation improved from 0.6110 → 0.5918. Saving checkpoint.
+Epoch 18 | train 0.6288 | val 0.5731 | acc 0.841
+➤ Validation improved from 0.5918 → 0.5731. Saving checkpoint.
+Epoch 19 | train 0.6055 | val 0.5543 | acc 0.846
+➤ Validation improved from 0.5731 → 0.5543. Saving checkpoint.
+Epoch 20 | train 0.5859 | val 0.5402 | acc 0.852
+➤ Validation improved from 0.5543 → 0.5402. Saving checkpoint.
+Epoch 21 | train 0.5678 | val 0.5276 | acc 0.855
+➤ Validation improved from 0.5402 → 0.5276. Saving checkpoint.
+Epoch 22 | train 0.5508 | val 0.5169 | acc 0.858
+➤ Validation improved from 0.5276 → 0.5169. Saving checkpoint.
+Epoch 23 | train 0.5353 | val 0.5032 | acc 0.864
+➤ Validation improved from 0.5169 → 0.5032. Saving checkpoint.
+Epoch 24 | train 0.5208 | val 0.4927 | acc 0.867
+➤ Validation improved from 0.5032 → 0.4927. Saving checkpoint.
+Epoch 25 | train 0.5071 | val 0.4843 | acc 0.871
+➤ Validation improved from 0.4927 → 0.4843. Saving checkpoint.
+Epoch 26 | train 0.4937 | val 0.4758 | acc 0.873
+➤ Validation improved from 0.4843 → 0.4758. Saving checkpoint.
+Epoch 27 | train 0.4829 | val 0.4696 | acc 0.876
+➤ Validation improved from 0.4758 → 0.4696. Saving checkpoint.
+Epoch 28 | train 0.4708 | val 0.4625 | acc 0.878
+➤ Validation improved from 0.4696 → 0.4625. Saving checkpoint.
+Epoch 29 | train 0.4611 | val 0.4573 | acc 0.879
+➤ Validation improved from 0.4625 → 0.4573. Saving checkpoint.
+Epoch 30 | train 0.4506 | val 0.4544 | acc 0.878
+➤ Validation improved from 0.4573 → 0.4544. Saving checkpoint.

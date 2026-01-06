@@ -1,0 +1,133 @@
+_wandb:
+    value:
+        cli_version: 0.21.0
+        e:
+            zsxpqr26lsd2d2in2wqj181n9i25cuh7:
+                args:
+                    - --batch_size=32
+                    - --beam_size=1
+                    - --cell_type=rnn
+                    - --dec_layers=1
+                    - --dropout=0.3
+                    - --embed=32
+                    - --enc_layers=3
+                    - --hidden=32
+                    - --learning_rate=0.001
+                codePath: train.py
+                codePathLocal: train.py
+                cpu_count: 64
+                cpu_count_logical: 128
+                cudaVersion: "12.7"
+                disk:
+                    /:
+                        total: "870869250048"
+                        used: "60585439232"
+                email: ns24z276@smail.iitm.ac.in
+                executable: /speech/sarath/miniconda3/envs/gpu_conda/bin/python
+                git:
+                    commit: 0b599e5f6aff4dacc36b6fc2e66c035f51f82158
+                    remote: https://github.com/Sarathkumar-amat/RNN_seq2seq.git
+                gpu: NVIDIA T400 4GB
+                gpu_count: 11
+                gpu_nvidia:
+                    - architecture: Turing
+                      cudaCores: 384
+                      memoryTotal: "4294967296"
+                      name: NVIDIA T400 4GB
+                      uuid: GPU-12e55abd-8af2-4c0e-3c20-1f399a05474a
+                    - architecture: Ampere
+                      cudaCores: 10752
+                      memoryTotal: "51527024640"
+                      name: NVIDIA RTX A6000
+                      uuid: GPU-59569ea5-9c93-9e1f-9ca3-19759c34715d
+                    - architecture: Ampere
+                      cudaCores: 10752
+                      memoryTotal: "51527024640"
+                      name: NVIDIA RTX A6000
+                      uuid: GPU-2b1808d6-5bfc-ea1d-8bd8-c1509ecc3d65
+                    - architecture: Ampere
+                      cudaCores: 10752
+                      memoryTotal: "51527024640"
+                      name: NVIDIA RTX A6000
+                      uuid: GPU-3d54964b-19ca-2d14-b217-6fb7a633d678
+                    - architecture: Ampere
+                      cudaCores: 10752
+                      memoryTotal: "51527024640"
+                      name: NVIDIA RTX A6000
+                      uuid: GPU-42df7162-3031-8d0b-85b7-1ae7175c1315
+                    - architecture: Ampere
+                      cudaCores: 10752
+                      memoryTotal: "51527024640"
+                      name: NVIDIA RTX A6000
+                      uuid: GPU-19192492-19e0-1e18-70ad-22120adb47ec
+                    - architecture: Ampere
+                      cudaCores: 10752
+                      memoryTotal: "51527024640"
+                      name: NVIDIA RTX A6000
+                      uuid: GPU-d60c4298-fd69-fb56-b080-f78308c5e7b6
+                    - architecture: Ampere
+                      cudaCores: 10752
+                      memoryTotal: "51527024640"
+                      name: NVIDIA RTX A6000
+                      uuid: GPU-eb3d3986-5711-e2f2-c3fa-a08823f4b8d2
+                    - architecture: Ampere
+                      cudaCores: 10752
+                      memoryTotal: "51527024640"
+                      name: NVIDIA RTX A6000
+                      uuid: GPU-3d50b1a2-54c8-b7ac-ecf8-75ce791e7da8
+                    - architecture: Ampere
+                      cudaCores: 10752
+                      memoryTotal: "51527024640"
+                      name: NVIDIA RTX A6000
+                      uuid: GPU-cc7b7775-668d-2d91-4ad6-759842a88d5b
+                    - architecture: Ampere
+                      cudaCores: 10752
+                      memoryTotal: "51527024640"
+                      name: NVIDIA RTX A6000
+                      uuid: GPU-917f1fff-b5f0-ec22-2745-b8ca1a58d661
+                host: gpu19
+                memory:
+                    total: "540853280768"
+                os: Linux-6.5.0-18-generic-x86_64-with-glibc2.35
+                program: /speech/sarath/RNN_seq2seq/train.py
+                python: CPython 3.9.20
+                root: /speech/sarath/RNN_seq2seq
+                startedAt: "2026-01-06T08:43:51.668345Z"
+                writerId: zsxpqr26lsd2d2in2wqj181n9i25cuh7
+        m: []
+        python_version: 3.9.20
+        t:
+            "1":
+                - 1
+                - 2
+                - 3
+                - 100
+            "2":
+                - 1
+                - 2
+                - 3
+                - 100
+            "3":
+                - 14
+            "4": 3.9.20
+            "5": 0.21.0
+            "12": 0.21.0
+            "13": linux-x86_64
+batch_size:
+    value: 32
+beam_size:
+    value: 1
+cell_type:
+    value: rnn
+dec_layers:
+    value: 1
+dropout:
+    value: 0.3
+embed:
+    value: 32
+enc_layers:
+    value: 3
+hidden:
+    value: 32
+learning_rate:
+    value: 0.001

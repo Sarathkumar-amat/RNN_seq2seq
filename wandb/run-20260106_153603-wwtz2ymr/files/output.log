@@ -1,0 +1,61 @@
+W&B config: {'batch_size': 32, 'beam_size': 1, 'cell_type': 'gru', 'dec_layers': 3, 'dropout': 0.3, 'embed': 32, 'enc_layers': 1, 'hidden': 128, 'learning_rate': 0.001}
+Epoch 01 | train 1.4832 | val 0.7191 | acc 0.793
+➤ Validation improved from inf → 0.7191. Saving checkpoint.
+Epoch 02 | train 0.7193 | val 0.5094 | acc 0.858
+➤ Validation improved from 0.7191 → 0.5094. Saving checkpoint.
+Epoch 03 | train 0.5651 | val 0.4392 | acc 0.881
+➤ Validation improved from 0.5094 → 0.4392. Saving checkpoint.
+Epoch 04 | train 0.4917 | val 0.4130 | acc 0.888
+➤ Validation improved from 0.4392 → 0.4130. Saving checkpoint.
+Epoch 05 | train 0.4441 | val 0.3993 | acc 0.894
+➤ Validation improved from 0.4130 → 0.3993. Saving checkpoint.
+Epoch 06 | train 0.4142 | val 0.3852 | acc 0.897
+➤ Validation improved from 0.3993 → 0.3852. Saving checkpoint.
+Epoch 07 | train 0.3903 | val 0.3750 | acc 0.901
+➤ Validation improved from 0.3852 → 0.3750. Saving checkpoint.
+Epoch 08 | train 0.3700 | val 0.3731 | acc 0.901
+➤ Validation improved from 0.3750 → 0.3731. Saving checkpoint.
+Epoch 09 | train 0.3550 | val 0.3642 | acc 0.903
+➤ Validation improved from 0.3731 → 0.3642. Saving checkpoint.
+Epoch 10 | train 0.3433 | val 0.3629 | acc 0.903
+➤ Validation improved from 0.3642 → 0.3629. Saving checkpoint.
+Epoch 11 | train 0.3320 | val 0.3558 | acc 0.905
+➤ Validation improved from 0.3629 → 0.3558. Saving checkpoint.
+Epoch 12 | train 0.3214 | val 0.3573 | acc 0.906
+➤ No improvement for 1 epoch(s).
+Epoch 13 | train 0.3146 | val 0.3516 | acc 0.908
+➤ Validation improved from 0.3558 → 0.3516. Saving checkpoint.
+Epoch 14 | train 0.3062 | val 0.3583 | acc 0.906
+➤ No improvement for 1 epoch(s).
+Epoch 15 | train 0.2993 | val 0.3554 | acc 0.907
+➤ No improvement for 2 epoch(s).
+Epoch 16 | train 0.2926 | val 0.3536 | acc 0.910
+➤ No improvement for 3 epoch(s).
+Epoch 17 | train 0.2880 | val 0.3561 | acc 0.910
+➤ No improvement for 4 epoch(s).
+Epoch 18 | train 0.2827 | val 0.3511 | acc 0.909
+➤ Validation improved from 0.3516 → 0.3511. Saving checkpoint.
+Epoch 19 | train 0.2772 | val 0.3533 | acc 0.909
+➤ No improvement for 1 epoch(s).
+Epoch 20 | train 0.2734 | val 0.3564 | acc 0.908
+➤ No improvement for 2 epoch(s).
+Epoch 21 | train 0.2695 | val 0.3512 | acc 0.910
+➤ No improvement for 3 epoch(s).
+Epoch 22 | train 0.2655 | val 0.3518 | acc 0.911
+➤ No improvement for 4 epoch(s).
+Epoch 23 | train 0.2625 | val 0.3476 | acc 0.912
+➤ Validation improved from 0.3511 → 0.3476. Saving checkpoint.
+Epoch 24 | train 0.2586 | val 0.3491 | acc 0.911
+➤ No improvement for 1 epoch(s).
+Epoch 25 | train 0.2548 | val 0.3507 | acc 0.912
+➤ No improvement for 2 epoch(s).
+Epoch 26 | train 0.2534 | val 0.3517 | acc 0.911
+➤ No improvement for 3 epoch(s).
+Epoch 27 | train 0.2504 | val 0.3485 | acc 0.913
+➤ No improvement for 4 epoch(s).
+Epoch 28 | train 0.2476 | val 0.3466 | acc 0.912
+➤ Validation improved from 0.3476 → 0.3466. Saving checkpoint.
+Epoch 29 | train 0.2446 | val 0.3581 | acc 0.910
+➤ No improvement for 1 epoch(s).
+Epoch 30 | train 0.2434 | val 0.3540 | acc 0.911
+➤ No improvement for 2 epoch(s).

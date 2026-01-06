@@ -1,0 +1,23 @@
+2026-01-06 13:13:33,791 INFO    MainThread:3619890 [wandb_setup.py:_flush():80] Current SDK version is 0.21.0
+2026-01-06 13:13:33,791 INFO    MainThread:3619890 [wandb_setup.py:_flush():80] Configure stats pid to 3619890
+2026-01-06 13:13:33,791 INFO    MainThread:3619890 [wandb_setup.py:_flush():80] Loading settings from /speech/sarath/.config/wandb/settings
+2026-01-06 13:13:33,791 INFO    MainThread:3619890 [wandb_setup.py:_flush():80] Loading settings from /speech/sarath/RNN_seq2seq/wandb/settings
+2026-01-06 13:13:33,791 INFO    MainThread:3619890 [wandb_setup.py:_flush():80] Loading settings from environment variables
+2026-01-06 13:13:33,791 INFO    MainThread:3619890 [wandb_init.py:setup_run_log_directory():703] Logging user logs to /speech/sarath/RNN_seq2seq/wandb/run-20260106_131333-jxy1r11j/logs/debug.log
+2026-01-06 13:13:33,791 INFO    MainThread:3619890 [wandb_init.py:setup_run_log_directory():704] Logging internal logs to /speech/sarath/RNN_seq2seq/wandb/run-20260106_131333-jxy1r11j/logs/debug-internal.log
+2026-01-06 13:13:33,791 INFO    MainThread:3619890 [wandb_init.py:init():830] calling init triggers
+2026-01-06 13:13:33,791 INFO    MainThread:3619890 [wandb_init.py:init():835] wandb.init called with sweep_config: {'batch_size': 32, 'beam_size': 1, 'cell_type': 'lstm', 'dec_layers': 2, 'dropout': 0.2, 'embed': 128, 'enc_layers': 1, 'hidden': 32, 'learning_rate': 0.0001}
+config: {'_wandb': {}}
+2026-01-06 13:13:33,791 INFO    MainThread:3619890 [wandb_init.py:init():871] starting backend
+2026-01-06 13:13:34,020 INFO    MainThread:3619890 [wandb_init.py:init():874] sending inform_init request
+2026-01-06 13:13:34,022 INFO    MainThread:3619890 [wandb_init.py:init():882] backend started and connected
+2026-01-06 13:13:34,023 INFO    MainThread:3619890 [wandb_run.py:_config_callback():1363] config_cb None None {'batch_size': 32, 'beam_size': 1, 'cell_type': 'lstm', 'dec_layers': 2, 'dropout': 0.2, 'embed': 128, 'enc_layers': 1, 'hidden': 32, 'learning_rate': 0.0001}
+2026-01-06 13:13:34,026 INFO    MainThread:3619890 [wandb_init.py:init():953] updated telemetry
+2026-01-06 13:13:34,053 INFO    MainThread:3619890 [wandb_init.py:init():977] communicating run to backend with 90.0 second timeout
+2026-01-06 13:13:34,920 INFO    MainThread:3619890 [wandb_init.py:init():1029] starting run threads in backend
+2026-01-06 13:13:35,093 INFO    MainThread:3619890 [wandb_run.py:_console_start():2458] atexit reg
+2026-01-06 13:13:35,093 INFO    MainThread:3619890 [wandb_run.py:_redirect():2306] redirect: wrap_raw
+2026-01-06 13:13:35,094 INFO    MainThread:3619890 [wandb_run.py:_redirect():2375] Wrapping output streams.
+2026-01-06 13:13:35,094 INFO    MainThread:3619890 [wandb_run.py:_redirect():2398] Redirects installed.
+2026-01-06 13:13:35,096 INFO    MainThread:3619890 [wandb_init.py:init():1075] run started, returning control to user process
+2026-01-06 13:13:35,356 INFO    MsgRouterThr:3619890 [mailbox.py:close():129] [no run ID] Closing mailbox, abandoning 1 handles.

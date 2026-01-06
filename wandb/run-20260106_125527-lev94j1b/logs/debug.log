@@ -1,0 +1,22 @@
+2026-01-06 12:55:27,045 INFO    MainThread:2994928 [wandb_setup.py:_flush():80] Current SDK version is 0.21.0
+2026-01-06 12:55:27,045 INFO    MainThread:2994928 [wandb_setup.py:_flush():80] Configure stats pid to 2994928
+2026-01-06 12:55:27,045 INFO    MainThread:2994928 [wandb_setup.py:_flush():80] Loading settings from /speech/sarath/.config/wandb/settings
+2026-01-06 12:55:27,045 INFO    MainThread:2994928 [wandb_setup.py:_flush():80] Loading settings from /speech/sarath/RNN_seq2seq/wandb/settings
+2026-01-06 12:55:27,045 INFO    MainThread:2994928 [wandb_setup.py:_flush():80] Loading settings from environment variables
+2026-01-06 12:55:27,045 INFO    MainThread:2994928 [wandb_init.py:setup_run_log_directory():703] Logging user logs to /speech/sarath/RNN_seq2seq/wandb/run-20260106_125527-lev94j1b/logs/debug.log
+2026-01-06 12:55:27,045 INFO    MainThread:2994928 [wandb_init.py:setup_run_log_directory():704] Logging internal logs to /speech/sarath/RNN_seq2seq/wandb/run-20260106_125527-lev94j1b/logs/debug-internal.log
+2026-01-06 12:55:27,045 INFO    MainThread:2994928 [wandb_init.py:init():830] calling init triggers
+2026-01-06 12:55:27,045 INFO    MainThread:2994928 [wandb_init.py:init():835] wandb.init called with sweep_config: {}
+config: {'_wandb': {}}
+2026-01-06 12:55:27,045 INFO    MainThread:2994928 [wandb_init.py:init():871] starting backend
+2026-01-06 12:55:27,274 INFO    MainThread:2994928 [wandb_init.py:init():874] sending inform_init request
+2026-01-06 12:55:27,277 INFO    MainThread:2994928 [wandb_init.py:init():882] backend started and connected
+2026-01-06 12:55:27,281 INFO    MainThread:2994928 [wandb_init.py:init():953] updated telemetry
+2026-01-06 12:55:27,307 INFO    MainThread:2994928 [wandb_init.py:init():977] communicating run to backend with 90.0 second timeout
+2026-01-06 12:55:28,212 INFO    MainThread:2994928 [wandb_init.py:init():1029] starting run threads in backend
+2026-01-06 12:55:28,379 INFO    MainThread:2994928 [wandb_run.py:_console_start():2458] atexit reg
+2026-01-06 12:55:28,379 INFO    MainThread:2994928 [wandb_run.py:_redirect():2306] redirect: wrap_raw
+2026-01-06 12:55:28,380 INFO    MainThread:2994928 [wandb_run.py:_redirect():2375] Wrapping output streams.
+2026-01-06 12:55:28,380 INFO    MainThread:2994928 [wandb_run.py:_redirect():2398] Redirects installed.
+2026-01-06 12:55:28,382 INFO    MainThread:2994928 [wandb_init.py:init():1075] run started, returning control to user process
+2026-01-06 12:55:28,663 INFO    MsgRouterThr:2994928 [mailbox.py:close():129] [no run ID] Closing mailbox, abandoning 1 handles.

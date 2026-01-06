@@ -1,0 +1,15 @@
+W&B config: {'batch_size': 32, 'beam_size': 1, 'cell_type': 'rnn', 'dec_layers': 2, 'dropout': 0.2, 'embed': 256, 'enc_layers': 1, 'hidden': 128, 'learning_rate': 0.001}
+Epoch 01 | train 2.0089 | val 1.8982 | acc 0.428
+➤ Validation improved from inf → 1.8982. Saving checkpoint.
+Epoch 02 | train 1.8453 | val 1.8618 | acc 0.442
+➤ Validation improved from 1.8982 → 1.8618. Saving checkpoint.
+Epoch 03 | train 1.7877 | val 1.8207 | acc 0.449
+➤ Validation improved from 1.8618 → 1.8207. Saving checkpoint.
+Traceback (most recent call last):
+  File "/speech/sarath/RNN_seq2seq/train.py", line 72, in <module>
+    val_loss   = evaluate(model, dev_loader,device,criterion,tgt_pad_idx=tgt_pad_idx,beam_size=config.beam_size,sos_idx=SOS,eos_idx=EOS)
+  File "/speech/sarath/miniconda3/envs/gpu_conda/lib/python3.9/site-packages/torch/autograd/grad_mode.py", line 27, in decorate_context
+    return func(*args, **kwargs)
+  File "/speech/sarath/RNN_seq2seq/evaluate.py", line 16, in evaluate
+    non_pad = (dec_out != tgt_pad_idx).sum().item()
+KeyboardInterrupt

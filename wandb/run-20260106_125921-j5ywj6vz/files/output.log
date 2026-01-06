@@ -1,0 +1,23 @@
+W&B config: {'batch_size': 32, 'beam_size': 5, 'cell_type': 'gru', 'dec_layers': 3, 'dropout': 0.3, 'embed': 128, 'enc_layers': 1, 'hidden': 64, 'learning_rate': 0.0001}
+Traceback (most recent call last):
+  File "/speech/sarath/RNN_seq2seq/train.py", line 71, in <module>
+    train_loss = train_one_epoch(model, train_loader, device,optimizer,criterion,tgt_pad_idx,clip=1.0, tfr=1.0)  # start with 1.0
+  File "/speech/sarath/RNN_seq2seq/train_one_epoch.py", line 15, in train_one_epoch
+    logits=model(src,src_len,dec_in,teacher_forcing_ratio=tfr)
+  File "/speech/sarath/miniconda3/envs/gpu_conda/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/speech/sarath/RNN_seq2seq/seq2seq_transliterate_wrapper.py", line 92, in forward
+    logits,_ = self.decoder(dec_in,enc_hidden)
+  File "/speech/sarath/miniconda3/envs/gpu_conda/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/speech/sarath/RNN_seq2seq/seq2seq_transliterate_wrapper.py", line 70, in forward
+    outputs,hidden = self.rnn(x,hidden)
+  File "/speech/sarath/miniconda3/envs/gpu_conda/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/speech/sarath/miniconda3/envs/gpu_conda/lib/python3.9/site-packages/torch/nn/modules/rnn.py", line 953, in forward
+    self.check_forward_args(input, hx, batch_sizes)
+  File "/speech/sarath/miniconda3/envs/gpu_conda/lib/python3.9/site-packages/torch/nn/modules/rnn.py", line 237, in check_forward_args
+    self.check_hidden_size(hidden, expected_hidden_size)
+  File "/speech/sarath/miniconda3/envs/gpu_conda/lib/python3.9/site-packages/torch/nn/modules/rnn.py", line 231, in check_hidden_size
+    raise RuntimeError(msg.format(expected_hidden_size, list(hx.size())))
+RuntimeError: Expected hidden size (3, 32, 64), got [1, 32, 64]

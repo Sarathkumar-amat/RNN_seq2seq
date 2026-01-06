@@ -1,0 +1,15 @@
+W&B config: {'batch_size': 32, 'beam_size': 3, 'cell_type': 'gru', 'dec_layers': 3, 'dropout': 0.2, 'embed': 16, 'enc_layers': 2, 'hidden': 128, 'learning_rate': 0.0001}
+Traceback (most recent call last):
+  File "/speech/sarath/RNN_seq2seq/train.py", line 72, in <module>
+    val_loss   = evaluate(model, dev_loader,device,criterion,tgt_pad_idx=tgt_pad_idx,beam_size=config.beam_size,sos_idx=SOS,eos_idx=EOS)
+  File "/speech/sarath/miniconda3/envs/gpu_conda/lib/python3.9/site-packages/torch/autograd/grad_mode.py", line 27, in decorate_context
+    return func(*args, **kwargs)
+  File "/speech/sarath/RNN_seq2seq/evaluate.py", line 10, in evaluate
+    logits = model(src, src_len, dec_in, teacher_forcing_ratio=0.0,beam_size=beam_size,sos_idx=sos_idx,eos_idx=eos_idx)
+  File "/speech/sarath/miniconda3/envs/gpu_conda/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/speech/sarath/RNN_seq2seq/seq2seq_transliterate_wrapper.py", line 112, in forward
+    seq = beam_search_decode(
+  File "/speech/sarath/RNN_seq2seq/seq2seq_transliterate_wrapper.py", line 18, in beam_search_decode
+    beams = [(torch.tensor([[sos_idx]], device=device), hidden, 0.0)]
+ValueError: too many dimensions 'str'

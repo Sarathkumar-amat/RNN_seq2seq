@@ -2,13 +2,13 @@ import torch.nn as nn
 import random
 import torch
 
-def make_rnn(cell_type,input_size,hidden_size,num_layers,batch_first=True):
+def make_rnn(cell_type,input_size,hidden_size,num_layers,batch_first=True,dropout=0.0):
     if cell_type=="rnn":
-        return nn.RNN(input_size,hidden_size,num_layers=num_layers,batch_first=batch_first)
+        return nn.RNN(input_size,hidden_size,num_layers=num_layers,batch_first=batch_first,dropout=dropout)
     elif cell_type=="gru":
-        return nn.GRU(input_size,hidden_size,num_layers=num_layers,batch_first=batch_first)
+        return nn.GRU(input_size,hidden_size,num_layers=num_layers,batch_first=batch_first,dropout=dropout)
     elif cell_type=="lstm":
-        return nn.LSTM(input_size,hidden_size,num_layers=num_layers,batch_first=batch_first)
+        return nn.LSTM(input_size,hidden_size,num_layers=num_layers,batch_first=batch_first,dropout=dropout)
     else:
         raise ValueError("cell_type must be 'rnn', 'gru', or 'lstm'")
 
@@ -73,28 +73,38 @@ class Decoder(nn.Module):
         return logits,hidden
 
 class translit_Seq2Seq(nn.Module):
-    def __init__(self,encoder,decoder,cell_type):
+    def __init__(self, encoder, decoder, cell_type):
         super().__init__()
         self.encoder = encoder
         self.decoder = decoder
         self.cell_type = cell_type
 
-    def forward(self,src,src_len,dec_in,teacher_forcing_ratio=1.0,beam_size=1,
+    def _init_decoder_hidden(self, enc_hidden):
+        dec_layers = self.decoder.rnn.num_layers
+        if isinstance(enc_hidden, tuple):
+            h, c = enc_hidden
+            h = h[-1:].repeat(dec_layers, 1, 1)
+            c = c[-1:].repeat(dec_layers, 1, 1)
+            return (h, c)
+        else:
+            return enc_hidden[-1:].repeat(dec_layers, 1, 1)
+
+    def forward(self, src, src_len, dec_in,
+                teacher_forcing_ratio=1.0,
+                beam_size=1,
                 sos_idx=None,
                 eos_idx=None):
+
         device = src.device
-        B,T_dec = dec_in.size()
-        _,enc_hidden = self.encoder(src,src_len)
+        B, T_dec = dec_in.size()
 
-        hidden = enc_hidden
+        _, enc_hidden = self.encoder(src, src_len)
+        hidden = self._init_decoder_hidden(enc_hidden)
 
-        if teacher_forcing_ratio>=1.0:
-            logits,_ = self.decoder(dec_in,enc_hidden)
+        if teacher_forcing_ratio >= 1.0 or beam_size == 1:
+            logits, _ = self.decoder(dec_in, hidden)
             return logits
-    
-    
 
-        # -------- Beam search (inference) --------
         assert sos_idx is not None and eos_idx is not None
 
         outputs = []

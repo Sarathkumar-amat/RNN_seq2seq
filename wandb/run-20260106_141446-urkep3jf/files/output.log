@@ -1,0 +1,5 @@
+W&B config: {'batch_size': 32, 'beam_size': 3, 'cell_type': 'gru', 'dec_layers': 1, 'dropout': 0.3, 'embed': 64, 'enc_layers': 2, 'hidden': 64, 'learning_rate': 0.001}
+Traceback (most recent call last):
+  File "/speech/sarath/RNN_seq2seq/train.py", line 60, in <module>
+    model = translit_Seq2Seq(enc, dec, cell_type=CELL_TYPE,beam_size=config.beam_size,sos_index=SOS,eos_index=EOS).to("cuda" if torch.cuda.is_available() else "cpu")
+TypeError: __init__() got an unexpected keyword argument 'beam_size'
