@@ -33,6 +33,8 @@ CELL = "gru"  # try "lstm" later
 
 log_dir = "runs/rnn_seq2seq"
 writer = SummaryWriter(log_dir)
+wandb.init()
+config = wandb.config
 
 wandb.init(
     project="rnn-seq2seq",
@@ -40,16 +42,15 @@ wandb.init(
     config={
         "epochs": EPOCHS,
         "batch_size": train_loader.batch_size,
-        "learning_rate": optimizer.param_groups[0]["lr"],
+        "learning_rate": config.learning_rate,
         "clip": 1.0,
         "teacher_forcing": 1.0,
         "model": "RNN-Seq2Seq"
     }
 )
-config = wandb.config
-enc = Encoder(CELL,SRC_V, config.embed, config.hidden, num_layers=config.layers, pad_idx=src_stoi[PAD])
-dec = Decoder(CELL,TGT_V, config.embed, config.hidden, num_layers=config.layers, pad_idx=tgt_stoi[PAD])
-model = translit_Seq2Seq(enc, dec, cell_type=CELL).to("cuda" if torch.cuda.is_available() else "cpu")
+enc = Encoder(config.cell_type,SRC_V, config.embed, config.hidden, num_layers=config.enc_layers, pad_idx=src_stoi[PAD])
+dec = Decoder(config.cell_type,TGT_V, config.embed, config.hidden, num_layers=config.dec_layers, pad_idx=tgt_stoi[PAD])
+model = translit_Seq2Seq(enc, dec, cell_type=config.cell_type).to("cuda" if torch.cuda.is_available() else "cpu")
 
 
 device = next(model.parameters()).device

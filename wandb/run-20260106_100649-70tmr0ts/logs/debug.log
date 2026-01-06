@@ -1,0 +1,6 @@
+2026-01-06 10:06:49,770 INFO    MainThread:2171516 [wandb_init.py:setup_run_log_directory():703] Logging user logs to /speech/sarath/RNN_seq2seq/wandb/run-20260106_100649-70tmr0ts/logs/debug.log
+2026-01-06 10:06:49,770 INFO    MainThread:2171516 [wandb_init.py:setup_run_log_directory():704] Logging internal logs to /speech/sarath/RNN_seq2seq/wandb/run-20260106_100649-70tmr0ts/logs/debug-internal.log
+2026-01-06 10:06:49,770 INFO    MainThread:2171516 [wandb_init.py:init():830] calling init triggers
+2026-01-06 10:06:49,770 INFO    MainThread:2171516 [wandb_init.py:init():835] wandb.init called with sweep_config: {'batch_size': 32, 'beam_size': 5, 'cell_type': 'RNN', 'dec_layers': 1, 'dropout': 0.2, 'embedding_size': 16, 'enc_layers': 1, 'hidden_size': 64, 'learning_rate': 0.0005}
+config: {'epochs': 30, 'batch_size': 64, 'learning_rate': 0.0005, 'clip': 1.0, 'teacher_forcing': 1.0, 'model': 'RNN-Seq2Seq', '_wandb': {}}
+2026-01-06 10:06:50,078 INFO    MsgRouterThr:2171516 [mailbox.py:close():129] [no run ID] Closing mailbox, abandoning 1 handles.

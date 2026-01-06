@@ -13,27 +13,34 @@ def make_rnn(cell_type,input_size,hidden_size,num_layers,batch_first=True):
         raise ValueError("cell_type must be 'rnn', 'gru', or 'lstm'")
 
 class Encoder(nn.Module):
-    def __init__(self,cell_type,vocab_size, embed_dim,hidden_size,num_layers,pad_idx):
+    def __init__(self,cell_type,vocab_size, embed_dim,hidden_size,num_layers,pad_idx,dropout=0.0):
         super().__init__()
         self.embedding = nn.Embedding(vocab_size,embed_dim,padding_idx=pad_idx)
-        self.rnn = make_rnn(cell_type,embed_dim,hidden_size,num_layers,batch_first=True)
+        self.emb_dropout = nn.Dropout(dropout)
+        self.rnn = make_rnn(cell_type,embed_dim,hidden_size,num_layers,batch_first=True,dropout=dropout if num_layers > 1 else 0.0)
         self.cell_type = cell_type
     def forward(self,src,src_len=None):
         x=self.embedding(src)
+        x = self.emb_dropout(x)
         outputs,hidden = self.rnn(x)
         return outputs, hidden
 
 class Decoder(nn.Module):
-    def __init__(self,cell_type,vocab_size,embed_dim,hidden_size,num_layers,pad_idx):
+    def __init__(self,cell_type,vocab_size,embed_dim,hidden_size,num_layers,pad_idx,dropout=0.0):
         super().__init__()
         self.embedding = nn.Embedding(vocab_size,embed_dim,padding_idx=pad_idx)
-        self.rnn = make_rnn(cell_type,embed_dim,hidden_size,num_layers,batch_first=True)
+        self.emb_dropout = nn.Dropout(dropout)
+        self.rnn = make_rnn(cell_type,embed_dim,hidden_size,num_layers,batch_first=True,dropout=dropout if num_layers > 1 else 0.0)
+        self.out_dropout = nn.Dropout(dropout)
+        # self.out = nn.Linear(hidden_size, vocab_size)
         self.out = nn.Linear(hidden_size,vocab_size)
         self.cell_type = cell_type
     
     def forward(self,y_in,hidden,tgt_len=None):
         x = self.embedding(y_in)
+        x = self.emb_dropout(x)
         outputs,hidden = self.rnn(x,hidden)
+        outputs = self.out_dropout(outputs)
         logits = self.out(outputs)
         return logits,hidden
 
