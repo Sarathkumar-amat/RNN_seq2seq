@@ -58,10 +58,10 @@ dev_data = DakshinaDataset(df_dev,src_stoi,tgt_stoi,tgt_stoi[SOS],tgt_stoi[EOS])
 
 BATCH_SIZE = 64
 
-train_loader = DataLoader(train_data,BATCH_SIZE,shuffle=True,collate_fn=collate_fn)
-dev_loader = DataLoader(dev_data,BATCH_SIZE,shuffle=False,collate_fn=collate_fn)
+# train_loader = DataLoader(train_data,BATCH_SIZE,shuffle=True,collate_fn=collate_fn)
+# dev_loader = DataLoader(dev_data,BATCH_SIZE,shuffle=False,collate_fn=collate_fn)
 
-batch = next(iter(train_loader))
+# batch = next(iter(train_loader))
 
-for x in batch:
-    print(type(x), x.shape)
+# for x in batch:
+#     print(type(x), x.shape)

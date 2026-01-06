@@ -1,5 +1,10 @@
 from train_one_epoch import train_one_epoch
-from encode_collate import train_loader,dev_loader,src_itos,tgt_itos,src_stoi,tgt_stoi,PAD
+from torch.utils.data import Dataset, DataLoader
+
+# from encode_collate import train_loader,dev_loader,src_itos,tgt_itos,src_stoi,tgt_stoi,PAD
+
+from encode_collate import train_data, dev_data,src_itos,tgt_itos,src_stoi,tgt_stoi,collate_fn,PAD
+
 from seq2seq_transliterate_wrapper import Encoder,Decoder,translit_Seq2Seq
 from evaluate import evaluate,char_accuracy
 from torch.utils.tensorboard import SummaryWriter
@@ -36,18 +41,20 @@ writer = SummaryWriter(log_dir)
 wandb.init()
 config = wandb.config
 
-wandb.init(
-    project="rnn-seq2seq",
-    name="baseline-rnn",
-    config={
-        "epochs": EPOCHS,
-        "batch_size": train_loader.batch_size,
-        "learning_rate": config.learning_rate,
-        "clip": 1.0,
-        "teacher_forcing": 1.0,
-        "model": "RNN-Seq2Seq"
-    }
-)
+# wandb.init(
+#     project="rnn-seq2seq",
+#     name="baseline-rnn",
+#     config={
+#         "epochs": EPOCHS,
+#         "batch_size": train_loader.batch_size,
+#         "learning_rate": config.learning_rate,
+#         "clip": 1.0,
+#         "teacher_forcing": 1.0,
+#         "model": "RNN-Seq2Seq"
+#     }
+# )
+
+
 enc = Encoder(config.cell_type,SRC_V, config.embed, config.hidden, num_layers=config.enc_layers, pad_idx=src_stoi[PAD])
 dec = Decoder(config.cell_type,TGT_V, config.embed, config.hidden, num_layers=config.dec_layers, pad_idx=tgt_stoi[PAD])
 model = translit_Seq2Seq(enc, dec, cell_type=config.cell_type).to("cuda" if torch.cuda.is_available() else "cpu")
@@ -56,6 +63,9 @@ model = translit_Seq2Seq(enc, dec, cell_type=config.cell_type).to("cuda" if torc
 device = next(model.parameters()).device
 criterion = nn.CrossEntropyLoss(ignore_index=tgt_pad_idx)
 optimizer = optim.Adam(model.parameters(), lr=config.learning_rate)
+
+train_loader = DataLoader(train_data,config.batch_size,shuffle=True,collate_fn=collate_fn)
+dev_loader = DataLoader(dev_data,config.batch_size,shuffle=False,collate_fn=collate_fn)
 
 for epoch in range(1, EPOCHS+1):
     train_loss = train_one_epoch(model, train_loader, device,optimizer,criterion,tgt_pad_idx,clip=1.0, tfr=1.0)  # start with 1.0
