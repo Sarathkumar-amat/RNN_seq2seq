@@ -1,0 +1,86 @@
+2026-01-06 02:18:13,556 INFO    MainThread:31413 [wandb_setup.py:_flush():80] Current SDK version is 0.23.1
+2026-01-06 02:18:13,556 INFO    MainThread:31413 [wandb_setup.py:_flush():80] Configure stats pid to 31413
+2026-01-06 02:18:13,556 INFO    MainThread:31413 [wandb_setup.py:_flush():80] Loading settings from /home/sarath_25/.config/wandb/settings
+2026-01-06 02:18:13,556 INFO    MainThread:31413 [wandb_setup.py:_flush():80] Loading settings from /home/sarath_25/DL_mithesh_assignment/RNN_seq2seq/wandb/settings
+2026-01-06 02:18:13,556 INFO    MainThread:31413 [wandb_setup.py:_flush():80] Loading settings from environment variables
+2026-01-06 02:18:13,556 INFO    MainThread:31413 [wandb_init.py:setup_run_log_directory():714] Logging user logs to /home/sarath_25/DL_mithesh_assignment/RNN_seq2seq/wandb/run-20260106_021813-98o4x13f/logs/debug.log
+2026-01-06 02:18:13,556 INFO    MainThread:31413 [wandb_init.py:setup_run_log_directory():715] Logging internal logs to /home/sarath_25/DL_mithesh_assignment/RNN_seq2seq/wandb/run-20260106_021813-98o4x13f/logs/debug-internal.log
+2026-01-06 02:18:13,556 INFO    MainThread:31413 [wandb_init.py:init():841] calling init triggers
+2026-01-06 02:18:13,556 INFO    MainThread:31413 [wandb_init.py:init():846] wandb.init called with sweep_config: {}
+config: {'epochs': 30, 'batch_size': 64, 'learning_rate': 0.0003, 'clip': 1.0, 'teacher_forcing': 1.0, 'model': 'RNN-Seq2Seq', '_wandb': {}}
+2026-01-06 02:18:13,556 INFO    MainThread:31413 [wandb_init.py:init():889] starting backend
+2026-01-06 02:18:14,021 INFO    MainThread:31413 [wandb_init.py:init():892] sending inform_init request
+2026-01-06 02:18:14,036 INFO    MainThread:31413 [wandb_init.py:init():900] backend started and connected
+2026-01-06 02:18:14,069 INFO    MainThread:31413 [wandb_init.py:init():970] updated telemetry
+2026-01-06 02:18:14,083 INFO    MainThread:31413 [wandb_init.py:init():994] communicating run to backend with 90.0 second timeout
+2026-01-06 02:18:24,576 INFO    Thread-2 (wrapped_target):31413 [retry.py:__call__():164] [no run ID] Retry attempt failed:
+Traceback (most recent call last):
+  File "/home/sarath_25/miniconda3/envs/linux_env/lib/python3.10/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "/home/sarath_25/miniconda3/envs/linux_env/lib/python3.10/site-packages/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/home/sarath_25/miniconda3/envs/linux_env/lib/python3.10/socket.py", line 967, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/sarath_25/miniconda3/envs/linux_env/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/home/sarath_25/miniconda3/envs/linux_env/lib/python3.10/site-packages/urllib3/connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "/home/sarath_25/miniconda3/envs/linux_env/lib/python3.10/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "/home/sarath_25/miniconda3/envs/linux_env/lib/python3.10/site-packages/urllib3/connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "/home/sarath_25/miniconda3/envs/linux_env/lib/python3.10/site-packages/urllib3/connection.py", line 753, in connect
+    self.sock = sock = self._new_conn()
+  File "/home/sarath_25/miniconda3/envs/linux_env/lib/python3.10/site-packages/urllib3/connection.py", line 205, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPSConnection object at 0x74265d07f340>: Failed to resolve 'api.wandb.ai' ([Errno -3] Temporary failure in name resolution)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/sarath_25/miniconda3/envs/linux_env/lib/python3.10/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "/home/sarath_25/miniconda3/envs/linux_env/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/home/sarath_25/miniconda3/envs/linux_env/lib/python3.10/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x74265d07f340>: Failed to resolve 'api.wandb.ai' ([Errno -3] Temporary failure in name resolution)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sarath_25/miniconda3/envs/linux_env/lib/python3.10/site-packages/wandb/sdk/lib/retry.py", line 157, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/home/sarath_25/miniconda3/envs/linux_env/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 391, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "/home/sarath_25/miniconda3/envs/linux_env/lib/python3.10/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/home/sarath_25/miniconda3/envs/linux_env/lib/python3.10/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/home/sarath_25/miniconda3/envs/linux_env/lib/python3.10/site-packages/wandb/sdk/lib/gql_request.py", line 70, in execute
+    request = self.session.post(self.url, **post_args)
+  File "/home/sarath_25/miniconda3/envs/linux_env/lib/python3.10/site-packages/requests/sessions.py", line 637, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+  File "/home/sarath_25/miniconda3/envs/linux_env/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/sarath_25/miniconda3/envs/linux_env/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/sarath_25/miniconda3/envs/linux_env/lib/python3.10/site-packages/requests/adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x74265d07f340>: Failed to resolve 'api.wandb.ai' ([Errno -3] Temporary failure in name resolution)"))
+2026-01-06 02:18:51,457 INFO    MainThread:31413 [wandb_init.py:init():1041] starting run threads in backend
+2026-01-06 02:18:51,594 INFO    MainThread:31413 [wandb_run.py:_console_start():2521] atexit reg
+2026-01-06 02:18:51,594 INFO    MainThread:31413 [wandb_run.py:_redirect():2369] redirect: wrap_raw
+2026-01-06 02:18:51,594 INFO    MainThread:31413 [wandb_run.py:_redirect():2438] Wrapping output streams.
+2026-01-06 02:18:51,594 INFO    MainThread:31413 [wandb_run.py:_redirect():2461] Redirects installed.
+2026-01-06 02:18:51,604 INFO    MainThread:31413 [wandb_init.py:init():1081] run started, returning control to user process
+2026-01-06 02:33:53,007 INFO    MainThread:31413 [wandb_run.py:_finish():2287] finishing run sarath11-iit-madras/rnn-seq2seq/98o4x13f
+2026-01-06 02:33:53,009 INFO    MainThread:31413 [wandb_run.py:_atexit_cleanup():2486] got exitcode: 0
+2026-01-06 02:33:53,009 INFO    MainThread:31413 [wandb_run.py:_restore():2468] restore
+2026-01-06 02:33:53,010 INFO    MainThread:31413 [wandb_run.py:_restore():2474] restore done
+2026-01-06 02:34:07,468 INFO    MainThread:31413 [wandb_run.py:_footer_sync_info():3862] logging synced files

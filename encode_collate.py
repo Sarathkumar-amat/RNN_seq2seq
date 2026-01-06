@@ -7,6 +7,9 @@ src_stoi, src_itos = build_char_vocab(df_train["roman"])
 tgt_stoi, tgt_itos = build_char_vocab(df_train["native"])
 PAD, SOS, EOS, UNK = "<pad>", "<s>", "</s>", "<unk>"
 
+print(f"vocab size input:{len(src_stoi)}")
+print(f"vocab size target:{len(tgt_stoi)}")
+
 def encode(texts,stoi,add_sos_eos=False,sos=False, eos=False, UNK="<unk>"):
     ids = [stoi.get(ch,stoi[UNK])  for ch in texts]
     if add_sos_eos:

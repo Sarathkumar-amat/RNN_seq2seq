@@ -1,0 +1,64 @@
+_wandb:
+    value:
+        cli_version: 0.23.1
+        e:
+            5frcb73mexp8qu9k0hh9xppysng24k2b:
+                codePath: train.py
+                codePathLocal: train.py
+                cpu_count: 6
+                cpu_count_logical: 12
+                disk:
+                    /:
+                        total: "1081101176832"
+                        used: "66257371136"
+                executable: /home/sarath_25/miniconda3/envs/linux_env/bin/python3
+                git:
+                    commit: 98962079cd5b3c5c0b26f4a7f02a0d5ca0f21b52
+                    remote: git@github.com:Sarathkumar-amat/RNN_seq2seq.git
+                host: sarath
+                memory:
+                    total: "7976730624"
+                os: Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39
+                program: /home/sarath_25/DL_mithesh_assignment/RNN_seq2seq/train.py
+                python: CPython 3.10.18
+                root: /home/sarath_25/DL_mithesh_assignment/RNN_seq2seq
+                startedAt: "2026-01-06T02:18:13.535847Z"
+                writerId: 5frcb73mexp8qu9k0hh9xppysng24k2b
+        m: []
+        python_version: 3.10.18
+        t:
+            "1":
+                - 1
+                - 2
+                - 3
+                - 5
+                - 53
+                - 100
+            "2":
+                - 1
+                - 2
+                - 3
+                - 5
+                - 53
+                - 100
+            "3":
+                - 2
+                - 3
+                - 13
+                - 16
+            "4": 3.10.18
+            "5": 0.23.1
+            "12": 0.23.1
+            "13": linux-x86_64
+batch_size:
+    value: 64
+clip:
+    value: 1
+epochs:
+    value: 30
+learning_rate:
+    value: 0.0003
+model:
+    value: RNN-Seq2Seq
+teacher_forcing:
+    value: 1

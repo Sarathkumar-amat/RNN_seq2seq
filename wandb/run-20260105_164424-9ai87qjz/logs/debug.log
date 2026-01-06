@@ -1,0 +1,15 @@
+2026-01-05 16:44:24,918 INFO    MainThread:20173 [wandb_setup.py:_flush():80] Current SDK version is 0.23.1
+2026-01-05 16:44:24,918 INFO    MainThread:20173 [wandb_setup.py:_flush():80] Configure stats pid to 20173
+2026-01-05 16:44:24,918 INFO    MainThread:20173 [wandb_setup.py:_flush():80] Loading settings from /home/sarath_25/.config/wandb/settings
+2026-01-05 16:44:24,918 INFO    MainThread:20173 [wandb_setup.py:_flush():80] Loading settings from /home/sarath_25/DL_mithesh_assignment/RNN_seq2seq/wandb/settings
+2026-01-05 16:44:24,918 INFO    MainThread:20173 [wandb_setup.py:_flush():80] Loading settings from environment variables
+2026-01-05 16:44:24,918 INFO    MainThread:20173 [wandb_init.py:setup_run_log_directory():714] Logging user logs to /home/sarath_25/DL_mithesh_assignment/RNN_seq2seq/wandb/run-20260105_164424-9ai87qjz/logs/debug.log
+2026-01-05 16:44:24,918 INFO    MainThread:20173 [wandb_init.py:setup_run_log_directory():715] Logging internal logs to /home/sarath_25/DL_mithesh_assignment/RNN_seq2seq/wandb/run-20260105_164424-9ai87qjz/logs/debug-internal.log
+2026-01-05 16:44:24,918 INFO    MainThread:20173 [wandb_init.py:init():841] calling init triggers
+2026-01-05 16:44:24,919 INFO    MainThread:20173 [wandb_init.py:init():846] wandb.init called with sweep_config: {}
+config: {'epochs': 30, 'batch_size': 64, 'learning_rate': 0.0003, 'clip': 1.0, 'teacher_forcing': 1.0, 'model': 'RNN-Seq2Seq', '_wandb': {}}
+2026-01-05 16:44:24,919 INFO    MainThread:20173 [wandb_init.py:init():889] starting backend
+2026-01-05 16:44:25,144 INFO    MainThread:20173 [wandb_init.py:init():892] sending inform_init request
+2026-01-05 16:44:25,147 INFO    MainThread:20173 [wandb_init.py:init():900] backend started and connected
+2026-01-05 16:44:25,162 INFO    MainThread:20173 [wandb_init.py:init():970] updated telemetry
+2026-01-05 16:44:25,167 INFO    MainThread:20173 [wandb_init.py:init():994] communicating run to backend with 90.0 second timeout

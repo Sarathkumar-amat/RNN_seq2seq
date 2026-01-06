@@ -1,0 +1,27 @@
+{
+  "os":  "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "python":  "CPython 3.10.18",
+  "startedAt":  "2026-01-06T02:18:13.535847Z",
+  "program":  "/home/sarath_25/DL_mithesh_assignment/RNN_seq2seq/train.py",
+  "codePath":  "train.py",
+  "codePathLocal":  "train.py",
+  "git":  {
+    "remote":  "git@github.com:Sarathkumar-amat/RNN_seq2seq.git",
+    "commit":  "98962079cd5b3c5c0b26f4a7f02a0d5ca0f21b52"
+  },
+  "root":  "/home/sarath_25/DL_mithesh_assignment/RNN_seq2seq",
+  "host":  "sarath",
+  "executable":  "/home/sarath_25/miniconda3/envs/linux_env/bin/python3",
+  "cpu_count":  6,
+  "cpu_count_logical":  12,
+  "disk":  {
+    "/":  {
+      "total":  "1081101176832",
+      "used":  "66257371136"
+    }
+  },
+  "memory":  {
+    "total":  "7976730624"
+  },
+  "writerId":  "5frcb73mexp8qu9k0hh9xppysng24k2b"
+}

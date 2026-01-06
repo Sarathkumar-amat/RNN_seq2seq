@@ -28,6 +28,7 @@ def build_char_vocab(texts):
     base = list(sorted(chars))
     itos = list(specials) + base
     stoi = {ch: i for i, ch in enumerate(itos)}
+    print(stoi)
     return stoi, itos
 
 

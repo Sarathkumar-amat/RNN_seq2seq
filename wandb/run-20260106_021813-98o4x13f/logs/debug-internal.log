@@ -1,0 +1,15 @@
+{"time":"2026-01-06T02:18:14.046131582Z","level":"INFO","msg":"stream: starting","core version":"0.23.1"}
+{"time":"2026-01-06T02:18:24.191257882Z","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai on 10.255.255.254:53: read udp 10.255.255.254:43279->10.255.255.254:53: i/o timeout"}
+{"time":"2026-01-06T02:18:36.653790602Z","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai on 10.255.255.254:53: read udp 10.255.255.254:39369->10.255.255.254:53: i/o timeout"}
+{"time":"2026-01-06T02:18:50.806354828Z","level":"INFO","msg":"stream: created new stream","id":"98o4x13f"}
+{"time":"2026-01-06T02:18:50.818215356Z","level":"INFO","msg":"handler: started","stream_id":"98o4x13f"}
+{"time":"2026-01-06T02:18:50.819234669Z","level":"INFO","msg":"stream: started","id":"98o4x13f"}
+{"time":"2026-01-06T02:18:50.819313945Z","level":"INFO","msg":"writer: started","stream_id":"98o4x13f"}
+{"time":"2026-01-06T02:18:50.819354868Z","level":"INFO","msg":"sender: started","stream_id":"98o4x13f"}
+{"time":"2026-01-06T02:33:32.967477035Z","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/sarath11-iit-madras/rnn-seq2seq/98o4x13f/file_stream\": unexpected EOF"}
+{"time":"2026-01-06T02:34:02.011106272Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-01-06T02:34:07.462032339Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-01-06T02:34:07.470336383Z","level":"INFO","msg":"stream: closing","id":"98o4x13f"}
+{"time":"2026-01-06T02:34:07.470401978Z","level":"INFO","msg":"handler: closed","stream_id":"98o4x13f"}
+{"time":"2026-01-06T02:34:07.470552805Z","level":"INFO","msg":"sender: closed","stream_id":"98o4x13f"}
+{"time":"2026-01-06T02:34:07.47057643Z","level":"INFO","msg":"stream: closed","id":"98o4x13f"}

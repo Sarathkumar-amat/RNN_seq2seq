@@ -1,0 +1,23 @@
+Epoch 01 | train 1.5249 | val 2.4320 | acc 0.502
+➤ Validation improved from inf → 2.4320. Saving checkpoint.
+[34m[1mwandb[0m: [33mWARNING[0m Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+Epoch 02 | train 0.5972 | val 2.0809 | acc 0.644
+➤ Validation improved from 2.4320 → 2.0809. Saving checkpoint.
+Epoch 03 | train 0.4187 | val 1.8667 | acc 0.702
+➤ Validation improved from 2.0809 → 1.8667. Saving checkpoint.
+Epoch 04 | train 0.3391 | val 1.7697 | acc 0.728
+➤ Validation improved from 1.8667 → 1.7697. Saving checkpoint.
+Epoch 05 | train 0.2897 | val 1.7452 | acc 0.748
+➤ Validation improved from 1.7697 → 1.7452. Saving checkpoint.
+Epoch 06 | train 0.2535 | val 1.7573 | acc 0.753
+➤ No improvement for 1 epoch(s).
+Epoch 07 | train 0.2255 | val 1.8175 | acc 0.755
+➤ No improvement for 2 epoch(s).
+Epoch 08 | train 0.2021 | val 1.8902 | acc 0.757
+➤ No improvement for 3 epoch(s).
+Epoch 09 | train 0.1833 | val 1.8797 | acc 0.760
+➤ No improvement for 4 epoch(s).
+Epoch 10 | train 0.1667 | val 1.9938 | acc 0.754
+➤ No improvement for 5 epoch(s).
+
+EARLY STOPPING TRIGGERED!

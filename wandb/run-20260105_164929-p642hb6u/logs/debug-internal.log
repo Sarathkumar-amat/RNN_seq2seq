@@ -1,0 +1,13 @@
+{"time":"2026-01-05T16:49:29.781720667Z","level":"INFO","msg":"stream: starting","core version":"0.23.1"}
+{"time":"2026-01-05T16:49:30.514359708Z","level":"INFO","msg":"stream: created new stream","id":"p642hb6u"}
+{"time":"2026-01-05T16:49:30.514546789Z","level":"INFO","msg":"handler: started","stream_id":"p642hb6u"}
+{"time":"2026-01-05T16:49:30.514731522Z","level":"INFO","msg":"stream: started","id":"p642hb6u"}
+{"time":"2026-01-05T16:49:30.514789255Z","level":"INFO","msg":"writer: started","stream_id":"p642hb6u"}
+{"time":"2026-01-05T16:49:30.51486724Z","level":"INFO","msg":"sender: started","stream_id":"p642hb6u"}
+{"time":"2026-01-05T16:51:35.376950531Z","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/sarath11-iit-madras/rnn-seq2seq/p642hb6u/file_stream\": unexpected EOF"}
+{"time":"2026-01-05T16:58:42.320410201Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-01-05T16:58:43.000817731Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-01-05T16:58:43.006294754Z","level":"INFO","msg":"stream: closing","id":"p642hb6u"}
+{"time":"2026-01-05T16:58:43.006325829Z","level":"INFO","msg":"handler: closed","stream_id":"p642hb6u"}
+{"time":"2026-01-05T16:58:43.006477351Z","level":"INFO","msg":"sender: closed","stream_id":"p642hb6u"}
+{"time":"2026-01-05T16:58:43.006497952Z","level":"INFO","msg":"stream: closed","id":"p642hb6u"}

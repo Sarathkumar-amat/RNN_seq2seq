@@ -1,0 +1,15 @@
+{"time":"2026-01-05T16:43:38.055296333Z","level":"INFO","msg":"stream: starting","core version":"0.23.1"}
+{"time":"2026-01-05T16:43:39.18774073Z","level":"INFO","msg":"stream: created new stream","id":"icehoubf"}
+{"time":"2026-01-05T16:43:39.187920532Z","level":"INFO","msg":"handler: started","stream_id":"icehoubf"}
+{"time":"2026-01-05T16:43:39.18811288Z","level":"INFO","msg":"stream: started","id":"icehoubf"}
+{"time":"2026-01-05T16:43:39.188188044Z","level":"INFO","msg":"writer: started","stream_id":"icehoubf"}
+{"time":"2026-01-05T16:43:39.188234657Z","level":"INFO","msg":"sender: started","stream_id":"icehoubf"}
+{"time":"2026-01-05T16:43:39.794081985Z","level":"ERROR","msg":"HTTP error","status":401,"method":"POST","url":"https://api.wandb.ai/graphql"}
+{"time":"2026-01-05T16:43:39.794331681Z","level":"ERROR","msg":"runupserter: failed to init run","error":"returned error 401: {\"data\":{\"upsertBucket\":null},\"errors\":[{\"message\":\"user is not logged in\",\"path\":[\"upsertBucket\"],\"extensions\":{\"code\":\"PERMISSION_ERROR\"}}]}"}
+{"time":"2026-01-05T16:43:39.806907598Z","level":"INFO","msg":"stream: closing","id":"icehoubf"}
+{"time":"2026-01-05T16:43:39.807390556Z","level":"ERROR","msg":"sender: uploadConfigFile: runupserter: run not yet initialized"}
+{"time":"2026-01-05T16:43:39.858268869Z","level":"ERROR","msg":"runfiles: runupserter: run not yet initialized"}
+{"time":"2026-01-05T16:43:39.85904406Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-01-05T16:43:39.859110497Z","level":"INFO","msg":"handler: closed","stream_id":"icehoubf"}
+{"time":"2026-01-05T16:43:39.859192802Z","level":"INFO","msg":"sender: closed","stream_id":"icehoubf"}
+{"time":"2026-01-05T16:43:39.859202766Z","level":"INFO","msg":"stream: closed","id":"icehoubf"}

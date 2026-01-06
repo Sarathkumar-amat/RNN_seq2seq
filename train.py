@@ -27,13 +27,7 @@ SRC_V, TGT_V = len(src_itos), len(tgt_itos)
 EMB, HID, LAYERS = 128, 256, 1
 CELL = "gru"  # try "lstm" later
 
-enc = Encoder(CELL,SRC_V, EMB, HID, num_layers=LAYERS, pad_idx=src_stoi[PAD])
-dec = Decoder(CELL,TGT_V, EMB, HID, num_layers=LAYERS, pad_idx=tgt_stoi[PAD])
-model = translit_Seq2Seq(enc, dec, cell_type=CELL).to("cuda" if torch.cuda.is_available() else "cpu")
 
-device = next(model.parameters()).device
-criterion = nn.CrossEntropyLoss(ignore_index=tgt_pad_idx)
-optimizer = optim.Adam(model.parameters(), lr=3e-4)
 
 # train_one_epoch(model, train_loader, device,optimizer,criterion,tgt_pad_idx,clip=1.0, tfr=1.0)  # start with 1.0
 
@@ -52,6 +46,15 @@ wandb.init(
         "model": "RNN-Seq2Seq"
     }
 )
+config = wandb.config
+enc = Encoder(CELL,SRC_V, config.embed, config.hidden, num_layers=config.layers, pad_idx=src_stoi[PAD])
+dec = Decoder(CELL,TGT_V, config.embed, config.hidden, num_layers=config.layers, pad_idx=tgt_stoi[PAD])
+model = translit_Seq2Seq(enc, dec, cell_type=CELL).to("cuda" if torch.cuda.is_available() else "cpu")
+
+
+device = next(model.parameters()).device
+criterion = nn.CrossEntropyLoss(ignore_index=tgt_pad_idx)
+optimizer = optim.Adam(model.parameters(), lr=config.learning_rate)
 
 for epoch in range(1, EPOCHS+1):
     train_loss = train_one_epoch(model, train_loader, device,optimizer,criterion,tgt_pad_idx,clip=1.0, tfr=1.0)  # start with 1.0
