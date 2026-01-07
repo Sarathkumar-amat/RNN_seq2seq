@@ -4,3 +4,10 @@
 {"time":"2026-01-07T17:51:55.823136687+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"0q9613ho"}
 {"time":"2026-01-07T17:51:55.823162647+05:30","level":"INFO","msg":"handler: started","stream_id":"0q9613ho"}
 {"time":"2026-01-07T17:51:55.823150907+05:30","level":"INFO","msg":"sender: started","stream_id":"0q9613ho"}
+{"time":"2026-01-07T18:09:32.590376674+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading artifact best-model-0q9613ho","runtime_seconds":1.005375916},{"desc":"uploading config.yaml","runtime_seconds":0.297820031,"progress":"4.8KB/4.8KB"}],"total_operations":2}}
+{"time":"2026-01-07T18:09:39.146286884+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-01-07T18:09:39.48397304+05:30","level":"INFO","msg":"stream: closing","id":"0q9613ho"}
+{"time":"2026-01-07T18:09:39.4840107+05:30","level":"INFO","msg":"handler: closed","stream_id":"0q9613ho"}
+{"time":"2026-01-07T18:09:39.48402275+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"0q9613ho"}
+{"time":"2026-01-07T18:09:39.484033111+05:30","level":"INFO","msg":"sender: closed","stream_id":"0q9613ho"}
+{"time":"2026-01-07T18:09:39.484096041+05:30","level":"INFO","msg":"stream: closed","id":"0q9613ho"}

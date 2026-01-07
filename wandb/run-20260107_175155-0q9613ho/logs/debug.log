@@ -20,3 +20,10 @@ config: {'_wandb': {}}
 2026-01-07 17:51:56,363 INFO    MainThread:2434710 [wandb_run.py:_redirect():2375] Wrapping output streams.
 2026-01-07 17:51:56,363 INFO    MainThread:2434710 [wandb_run.py:_redirect():2398] Redirects installed.
 2026-01-07 17:51:56,365 INFO    MainThread:2434710 [wandb_init.py:init():1075] run started, returning control to user process
+2026-01-07 18:09:31,586 INFO    MainThread:2434710 [wandb_run.py:_finish():2224] finishing run sarath11-iit-madras/RNN_seq2seq/0q9613ho
+2026-01-07 18:09:31,586 INFO    MainThread:2434710 [wandb_run.py:_atexit_cleanup():2423] got exitcode: 0
+2026-01-07 18:09:31,586 INFO    MainThread:2434710 [wandb_run.py:_restore():2405] restore
+2026-01-07 18:09:31,587 INFO    MainThread:2434710 [wandb_run.py:_restore():2411] restore done
+2026-01-07 18:09:39,481 INFO    MainThread:2434710 [wandb_run.py:_footer_history_summary_info():3903] rendering history
+2026-01-07 18:09:39,482 INFO    MainThread:2434710 [wandb_run.py:_footer_history_summary_info():3935] rendering summary
+2026-01-07 18:09:39,483 INFO    MainThread:2434710 [wandb_run.py:_footer_sync_info():3864] logging synced files

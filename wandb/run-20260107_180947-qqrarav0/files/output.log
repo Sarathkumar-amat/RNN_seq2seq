@@ -1,0 +1,9 @@
+W&B config: {'batch_size': 64, 'beam_size': 3, 'cell_type': 'rnn', 'dec_layers': 1, 'dropout': 0.2, 'embed': 16, 'enc_layers': 3, 'hidden': 128, 'learning_rate': 0.0001}
+Epoch 01 | train 2.7544 | val 2.4369 | acc 0.306
+➤ Validation improved from inf → 2.4369. Saving checkpoint.
+Epoch 02 | train 2.3928 | val 2.2981 | acc 0.336
+➤ Validation improved from 2.4369 → 2.2981. Saving checkpoint.
+Epoch 03 | train 2.2981 | val 2.2210 | acc 0.350
+➤ Validation improved from 2.2981 → 2.2210. Saving checkpoint.
+Epoch 04 | train 2.2415 | val 2.1722 | acc 0.363
+➤ Validation improved from 2.2210 → 2.1722. Saving checkpoint.
