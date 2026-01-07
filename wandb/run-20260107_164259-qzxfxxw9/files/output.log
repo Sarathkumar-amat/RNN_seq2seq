@@ -1,0 +1,29 @@
+W&B config: {'batch_size': 64, 'beam_size': 1, 'cell_type': 'gru', 'dec_layers': 2, 'dropout': 0.2, 'embed': 16, 'enc_layers': 1, 'hidden': 128, 'learning_rate': 0.0001}
+Epoch 01 | train 2.7794 | val 2.4211 | acc 0.308
+➤ Validation improved from inf → 2.4211. Saving checkpoint.
+Epoch 02 | train 2.3473 | val 2.1505 | acc 0.388
+➤ Validation improved from 2.4211 → 2.1505. Saving checkpoint.
+Epoch 03 | train 2.1216 | val 1.9714 | acc 0.430
+➤ Validation improved from 2.1505 → 1.9714. Saving checkpoint.
+Epoch 04 | train 1.9775 | val 1.8354 | acc 0.470
+➤ Validation improved from 1.9714 → 1.8354. Saving checkpoint.
+Epoch 05 | train 1.8597 | val 1.7116 | acc 0.503
+➤ Validation improved from 1.8354 → 1.7116. Saving checkpoint.
+Traceback (most recent call last):
+  File "/speech/sarath/RNN_seq2seq/train.py", line 72, in <module>
+    val_loss   = evaluate(model, dev_loader,device,criterion,tgt_pad_idx=tgt_pad_idx,beam_size=config.beam_size,sos_idx=tgt_stoi[SOS],eos_idx=tgt_stoi[EOS])
+  File "/speech/sarath/miniconda3/envs/gpu_conda/lib/python3.9/site-packages/torch/autograd/grad_mode.py", line 27, in decorate_context
+    return func(*args, **kwargs)
+  File "/speech/sarath/RNN_seq2seq/evaluate.py", line 8, in evaluate
+    for src, src_len, dec_in, dec_out in loader:
+  File "/speech/sarath/miniconda3/envs/gpu_conda/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "/speech/sarath/miniconda3/envs/gpu_conda/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 671, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/speech/sarath/miniconda3/envs/gpu_conda/lib/python3.9/site-packages/torch/utils/data/_utils/fetch.py", line 61, in fetch
+    return self.collate_fn(data)
+  File "/speech/sarath/RNN_seq2seq/encode_collate.py", line 49, in collate_fn
+    tgt_pad_batch, tgt_len = pad_batch(tgt_seqs,tgt_pad)
+  File "/speech/sarath/RNN_seq2seq/encode_collate.py", line 40, in pad_batch
+    out[i,:len(s)]=s
+KeyboardInterrupt

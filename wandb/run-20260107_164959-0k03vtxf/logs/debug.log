@@ -1,0 +1,11 @@
+2026-01-07 16:49:59,872 INFO    MainThread:4056493 [wandb_setup.py:_flush():80] Current SDK version is 0.21.0
+2026-01-07 16:49:59,872 INFO    MainThread:4056493 [wandb_setup.py:_flush():80] Configure stats pid to 4056493
+2026-01-07 16:49:59,872 INFO    MainThread:4056493 [wandb_setup.py:_flush():80] Loading settings from /speech/sarath/.config/wandb/settings
+2026-01-07 16:49:59,872 INFO    MainThread:4056493 [wandb_setup.py:_flush():80] Loading settings from /speech/sarath/RNN_seq2seq/wandb/settings
+2026-01-07 16:49:59,872 INFO    MainThread:4056493 [wandb_setup.py:_flush():80] Loading settings from environment variables
+2026-01-07 16:49:59,872 INFO    MainThread:4056493 [wandb_init.py:setup_run_log_directory():703] Logging user logs to /speech/sarath/RNN_seq2seq/wandb/run-20260107_164959-0k03vtxf/logs/debug.log
+2026-01-07 16:49:59,872 INFO    MainThread:4056493 [wandb_init.py:setup_run_log_directory():704] Logging internal logs to /speech/sarath/RNN_seq2seq/wandb/run-20260107_164959-0k03vtxf/logs/debug-internal.log
+2026-01-07 16:49:59,872 INFO    MainThread:4056493 [wandb_init.py:init():830] calling init triggers
+2026-01-07 16:49:59,872 INFO    MainThread:4056493 [wandb_init.py:init():835] wandb.init called with sweep_config: {'batch_size': 32, 'beam_size': 5, 'cell_type': 'lstm', 'dec_layers': 1, 'dropout': 0.3, 'embed': 16, 'enc_layers': 3, 'hidden': 32, 'learning_rate': 0.0005}
+config: {'_wandb': {}}
+2026-01-07 16:49:59,873 INFO    MainThread:4056493 [wandb_init.py:init():871] starting backend

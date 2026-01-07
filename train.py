@@ -1,5 +1,6 @@
 from train_one_epoch import train_one_epoch
 from torch.utils.data import Dataset, DataLoader
+import os
 
 # from encode_collate import train_loader,dev_loader,src_itos,tgt_itos,src_stoi,tgt_stoi,PAD
 
@@ -18,7 +19,12 @@ import torch.nn as nn
 EPOCHS = 30
 PATIENCE = 5                       # stop after 5 epochs without improvement
 MIN_DELTA = 1e-4                   # minimum improvement to consider as progress
-BEST_MODEL_PATH = "best_model.pt"  # where to save best checkpoint
+
+
+os.makedirs("checkpoints", exist_ok=True)
+# BEST_MODEL_PATH = f"checkpoints/{wandb.run.name}_best.pt"
+
+
 
 best_val_loss = float("inf")
 epochs_no_improve = 0
@@ -53,6 +59,9 @@ config = wandb.config
 #         "model": "RNN-Seq2Seq"
 #     }
 # )
+run_id = wandb.run.id
+BEST_MODEL_PATH = f"checkpoints/{wandb.run.name}_best.pt"
+
 print("W&B config:", dict(config))
 CELL_TYPE = config.cell_type
 enc = Encoder(CELL_TYPE,SRC_V, config.embed, config.hidden, num_layers=config.enc_layers, pad_idx=src_stoi[PAD],dropout=config.dropout)
@@ -69,7 +78,7 @@ dev_loader = DataLoader(dev_data,config.batch_size,shuffle=False,collate_fn=coll
 
 for epoch in range(1, EPOCHS+1):
     train_loss = train_one_epoch(model,train_loader,device,optimizer,criterion,tgt_pad_idx,clip=1.0, tfr=1.0)  # start with 1.0
-    val_loss   = evaluate(model, dev_loader,device,criterion,tgt_pad_idx=tgt_pad_idx,beam_size=config.beam_size,sos_idx=SOS,eos_idx=EOS)
+    val_loss   = evaluate(model, dev_loader,device,criterion,tgt_pad_idx=tgt_pad_idx,beam_size=config.beam_size,sos_idx=tgt_stoi[SOS],eos_idx=tgt_stoi[EOS])
     val_acc    = char_accuracy(model, dev_loader,device,criterion,tgt_pad_idx=tgt_pad_idx)
 
 
@@ -106,7 +115,20 @@ for epoch in range(1, EPOCHS+1):
         }, BEST_MODEL_PATH)
 
         # upload checkpoint to W&B
-        wandb.save(BEST_MODEL_PATH)
+        artifact = wandb.Artifact(
+    name=f"best-model-{wandb.run.id}",
+    type="model",
+    metadata={
+        "val_loss": val_loss,
+        "epoch": epoch,
+        "cell_type": CELL_TYPE,
+        "embed": config.embed,
+        "hidden": config.hidden
+    }
+)
+
+        artifact.add_file(BEST_MODEL_PATH)
+        wandb.log_artifact(artifact)
 
     else:
         epochs_no_improve += 1

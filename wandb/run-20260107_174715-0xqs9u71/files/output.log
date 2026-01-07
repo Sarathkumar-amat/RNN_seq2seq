@@ -1,0 +1,3 @@
+W&B config: {'batch_size': 32, 'beam_size': 3, 'cell_type': 'gru', 'dec_layers': 2, 'dropout': 0.3, 'embed': 32, 'enc_layers': 3, 'hidden': 64, 'learning_rate': 0.0001}
+Epoch 01 | train 2.7625 | val 2.3708 | acc 0.309
+➤ Validation improved from inf → 2.3708. Saving checkpoint.

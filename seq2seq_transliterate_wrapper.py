@@ -16,7 +16,8 @@ def make_rnn(cell_type,input_size,hidden_size,num_layers,batch_first=True,dropou
 def beam_search_decode(decoder, hidden, sos_idx, eos_idx,
                        max_len, beam_size, device):
         beams = [(torch.tensor([[sos_idx]], device=device), hidden, 0.0)]
-
+        
+        # print(hidden.shape)
         for _ in range(max_len):
             new_beams = []
 
@@ -89,6 +90,15 @@ class translit_Seq2Seq(nn.Module):
         else:
             return enc_hidden[-1:].repeat(dec_layers, 1, 1)
 
+    def _select_hidden(self, hidden, b):
+        if isinstance(hidden, tuple):  # LSTM
+            h, c = hidden
+            h = h[:, b:b+1, :].contiguous()
+            c = c[:, b:b+1, :].contiguous()
+            return (h, c)
+        else:  # RNN / GRU
+            return hidden[:, b:b+1, :].contiguous()
+
     def forward(self, src, src_len, dec_in,
                 teacher_forcing_ratio=1.0,
                 beam_size=1,
@@ -108,10 +118,13 @@ class translit_Seq2Seq(nn.Module):
         assert sos_idx is not None and eos_idx is not None
 
         outputs = []
+        
         for b in range(B):
+
+            h_b = self._select_hidden(hidden, b)
             seq = beam_search_decode(
                 self.decoder,
-                hidden,
+                h_b,
                 sos_idx,
                 eos_idx,
                 max_len=T_dec,

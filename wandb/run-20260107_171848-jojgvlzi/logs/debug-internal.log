@@ -1,0 +1,6 @@
+{"time":"2026-01-07T17:18:49.170623256+05:30","level":"INFO","msg":"stream: starting","core version":"0.21.0"}
+{"time":"2026-01-07T17:18:49.668113578+05:30","level":"INFO","msg":"stream: created new stream","id":"jojgvlzi"}
+{"time":"2026-01-07T17:18:49.668158558+05:30","level":"INFO","msg":"stream: started","id":"jojgvlzi"}
+{"time":"2026-01-07T17:18:49.668190678+05:30","level":"INFO","msg":"sender: started","stream_id":"jojgvlzi"}
+{"time":"2026-01-07T17:18:49.668188288+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"jojgvlzi"}
+{"time":"2026-01-07T17:18:49.668198328+05:30","level":"INFO","msg":"handler: started","stream_id":"jojgvlzi"}

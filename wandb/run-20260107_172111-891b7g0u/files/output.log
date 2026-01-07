@@ -1,0 +1,21 @@
+W&B config: {'batch_size': 64, 'beam_size': 3, 'cell_type': 'lstm', 'dec_layers': 2, 'dropout': 0.2, 'embed': 64, 'enc_layers': 2, 'hidden': 32, 'learning_rate': 0.0001}
+Epoch 01 | train 3.1895 | val 2.9164 | acc 0.197
+➤ Validation improved from inf → 2.9164. Saving checkpoint.
+Epoch 02 | train 2.8214 | val 2.6986 | acc 0.285
+➤ Validation improved from 2.9164 → 2.6986. Saving checkpoint.
+Epoch 03 | train 2.5914 | val 2.4581 | acc 0.332
+➤ Validation improved from 2.6986 → 2.4581. Saving checkpoint.
+Epoch 04 | train 2.4280 | val 2.3239 | acc 0.361
+➤ Validation improved from 2.4581 → 2.3239. Saving checkpoint.
+Epoch 05 | train 2.3264 | val 2.2292 | acc 0.384
+➤ Validation improved from 2.3239 → 2.2292. Saving checkpoint.
+Epoch 06 | train 2.2487 | val 2.1446 | acc 0.403
+➤ Validation improved from 2.2292 → 2.1446. Saving checkpoint.
+Epoch 07 | train 2.1810 | val 2.0705 | acc 0.421
+➤ Validation improved from 2.1446 → 2.0705. Saving checkpoint.
+Epoch 08 | train 2.1167 | val 1.9927 | acc 0.439
+➤ Validation improved from 2.0705 → 1.9927. Saving checkpoint.
+Epoch 09 | train 2.0563 | val 1.9218 | acc 0.458
+➤ Validation improved from 1.9927 → 1.9218. Saving checkpoint.
+Epoch 10 | train 2.0015 | val 1.8607 | acc 0.476
+➤ Validation improved from 1.9218 → 1.8607. Saving checkpoint.
